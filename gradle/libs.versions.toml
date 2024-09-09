@@ -16,6 +16,7 @@ hiltAndroid = "2.52"
 hiltAndroidCompiler = "2.52"
 navigation = "2.8.0"
 swiperefreshlayout = "1.1.0"
+gson = "2.10.1"
 
 
 [libraries]
@@ -35,6 +36,7 @@ hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", ve
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 androidx-fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentTesting" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+com-google-code-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
