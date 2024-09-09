@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WorldWords</string>
+    <string name="word_image">word desc</string>
 </resources>
