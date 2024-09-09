@@ -14,7 +14,6 @@ class LearnedWordAdapter(
         fun bind(word: Word) {
             binding.tvTurkishWord.text = word.turkish
             binding.tvEnglishWord.text = word.english
-            binding.tvDifficulty.text = word.difficulty.toString()
             binding.wordImage.setImageResource(word.image)
         }
     }

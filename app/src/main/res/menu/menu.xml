@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/wordFragment"
-        android:icon="@drawable/ic_words"
+        android:icon="@drawable/baseline_rate_review_24"
         android:title="Word"/>
     <item
         android:id="@+id/learnedWordFragment"
         android:icon="@drawable/baseline_home_24"
-        android:title="Learned Word"/>
+        android:title="Learned"/>
 
 </menu>

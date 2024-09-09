@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.FragmentLearnedWordBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -39,7 +39,7 @@ class LearnedWordFragment : Fragment() {
     private fun setupRecyclerView() {
         learnedWordAdapter = LearnedWordAdapter(emptyList())
         binding.rwLearnedWord.apply {
-            layoutManager = LinearLayoutManager(requireContext())
+            layoutManager = GridLayoutManager(requireContext(), 3)
             adapter = learnedWordAdapter
         }
     }
