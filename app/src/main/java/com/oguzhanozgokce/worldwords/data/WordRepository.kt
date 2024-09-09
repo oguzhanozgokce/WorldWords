@@ -2,8 +2,9 @@ package com.oguzhanozgokce.worldwords.data
 
 import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.model.Word
+import javax.inject.Inject
 
-class WordRepository {
+class WordRepository @Inject constructor(private val sharedPreferencesDataSource: SharedPreferencesDataSource) {
     private val wordList = mutableListOf(
         Word("elma", "apple", 1, R.drawable.ic_apple),
         Word("kitap", "book", 1, R.drawable.ic_book),
@@ -310,7 +311,6 @@ class WordRepository {
         )
     )
 
-    private val learnedWordList = mutableListOf<Word>()
 
     fun getWords(): List<Word> {
         return wordList
@@ -337,14 +337,15 @@ class WordRepository {
     }
 
     fun addWordToLearnedList(word: Word) {
-        learnedWordList.add(word)
+        sharedPreferencesDataSource.addLearnedWord(word)
     }
 
     fun getLearnedWords(): List<Word> {
-        return learnedWordList
+        return sharedPreferencesDataSource.getLearnedWords()
     }
 
     fun removeWordFromLearnedList(word: Word) {
-        learnedWordList.remove(word)
+        sharedPreferencesDataSource.removeLearnedWord(word)
     }
+
 }
