@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 
-class WordAdapter(private var words: List<Word>) :
+class WordAdapter(
+    private var words: List<Word>,
+    private val onItemClick: (Word) -> Unit) :
     RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     inner class WordViewHolder(private val binding: ItemLayoutWordBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -15,6 +17,7 @@ class WordAdapter(private var words: List<Word>) :
             binding.tvEnglishWord.text = word.english
             binding.tvDifficulty.text = word.difficulty.toString()
             binding.wordImage.setImageResource(word.image)
+            binding.root.setOnClickListener { onItemClick(word) }
         }
     }
 

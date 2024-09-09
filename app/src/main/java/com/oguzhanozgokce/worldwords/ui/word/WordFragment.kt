@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,7 +31,10 @@ class WordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        wordAdapter = WordAdapter(emptyList())
+        wordAdapter = WordAdapter(emptyList(), onItemClick = { word ->
+            val action = WordFragmentDirections.actionWordFragmentToWordDetailFragment(word)
+            findNavController().navigate(action)
+        })
 
         binding.rwWord.apply {
             layoutManager = LinearLayoutManager(requireContext())
