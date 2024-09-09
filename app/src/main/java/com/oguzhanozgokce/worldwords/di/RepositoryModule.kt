@@ -4,11 +4,11 @@ import com.oguzhanozgokce.worldwords.data.WordRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
-@InstallIn(ViewModelComponent::class)
+@InstallIn(SingletonComponent::class)
 object RepositoryModule {
 
     @Provides
@@ -16,5 +16,4 @@ object RepositoryModule {
     fun provideWordRepository(): WordRepository {
         return WordRepository()
     }
-
 }
