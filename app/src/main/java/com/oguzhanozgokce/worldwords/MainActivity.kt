@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.ActivityMainBinding
 import com.oguzhanozgokce.worldwords.ui.WordAdapter
@@ -17,7 +18,6 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val wordViewModel: WordViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -29,16 +29,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val wordAdapter = WordAdapter(emptyList())
-        binding.rcWord.apply {
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = wordAdapter
-        }
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        lifecycleScope.launch {
-            wordViewModel.wordList.collect { words ->
-                wordAdapter.updateWords(words)
-            }
-        }
     }
 }
