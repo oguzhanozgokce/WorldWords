@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordBinding
+import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -30,26 +31,44 @@ class WordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView()
+        setupSwipeToRefresh()
+        observeWordList()
+    }
 
+    private fun setupRecyclerView() {
         wordAdapter = WordAdapter(emptyList(), onItemClick = { word ->
-            val action = WordFragmentDirections.actionWordFragmentToWordDetailFragment(word)
-            findNavController().navigate(action)
+            navigateToWordDetail(word)
         })
 
         binding.rwWord.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = wordAdapter
         }
+    }
 
+    private fun navigateToWordDetail(word: Word) {
+        val action = WordFragmentDirections.actionWordFragmentToWordDetailFragment(word)
+        findNavController().navigate(action)
+    }
+
+    private fun setupSwipeToRefresh() {
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            wordViewModel.shuffleWords()
+        }
+    }
+
+    private fun observeWordList() {
         viewLifecycleOwner.lifecycleScope.launch {
             wordViewModel.wordList.collect { words ->
                 wordAdapter.updateWords(words)
+                binding.swipeRefreshLayout.isRefreshing = false
             }
         }
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         _binding = null
     }
 }
