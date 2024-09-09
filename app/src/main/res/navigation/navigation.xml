@@ -9,5 +9,18 @@
         android:id="@+id/wordFragment"
         android:name="com.oguzhanozgokce.worldwords.ui.word.WordFragment"
         android:label="fragment_word"
-        tools:layout="@layout/fragment_word" />
+        tools:layout="@layout/fragment_word">
+        <action
+            android:id="@+id/action_wordFragment_to_wordDetailFragment"
+            app:destination="@id/wordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordDetailFragment"
+        android:name="com.oguzhanozgokce.worldwords.ui.detail.WordDetailFragment"
+        android:label="fragment_word_detail"
+        tools:layout="@layout/fragment_word_detail">
+        <argument
+            android:name="word"
+            app:argType="com.oguzhanozgokce.worldwords.model.Word" />
+    </fragment>
 </navigation>

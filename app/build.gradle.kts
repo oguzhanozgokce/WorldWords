@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
     alias(libs.plugins.com.google.dagger.hilt.android)
+    alias(libs.plugins.navigationSafeArgs)
 }
 
 android {
