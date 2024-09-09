@@ -7,7 +7,6 @@
     android:background="@color/white"
     tools:context=".ui.word.WordFragment">
 
-
     <LinearLayout
         android:id="@+id/ll_table_header"
         android:layout_width="match_parent"
