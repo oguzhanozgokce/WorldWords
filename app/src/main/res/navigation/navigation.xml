@@ -23,4 +23,9 @@
             android:name="word"
             app:argType="com.oguzhanozgokce.worldwords.model.Word" />
     </fragment>
+    <fragment
+        android:id="@+id/learnedWordFragment"
+        android:name="com.oguzhanozgokce.worldwords.ui.learnedword.LearnedWordFragment"
+        android:label="fragment_learned_word"
+        tools:layout="@layout/fragment_learned_word" />
 </navigation>
