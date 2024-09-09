@@ -1,4 +1,4 @@
-package com.oguzhanozgokce.worldwords.ui
+package com.oguzhanozgokce.worldwords.ui.word
 
 import androidx.lifecycle.ViewModel
 import com.oguzhanozgokce.worldwords.data.WordRepository

@@ -2,18 +2,12 @@ package com.oguzhanozgokce.worldwords
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.ActivityMainBinding
-import com.oguzhanozgokce.worldwords.ui.WordAdapter
-import com.oguzhanozgokce.worldwords.ui.WordViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

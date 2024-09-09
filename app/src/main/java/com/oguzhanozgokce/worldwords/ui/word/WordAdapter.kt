@@ -1,4 +1,4 @@
-package com.oguzhanozgokce.worldwords.ui
+package com.oguzhanozgokce.worldwords.ui.word
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

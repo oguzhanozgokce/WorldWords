@@ -9,8 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordBinding
-import com.oguzhanozgokce.worldwords.ui.WordAdapter
-import com.oguzhanozgokce.worldwords.ui.WordViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

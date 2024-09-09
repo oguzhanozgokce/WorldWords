@@ -20,7 +20,7 @@
             android:id="@+id/wordImage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:src="@drawable/ic_apple"
             android:scaleType="centerInside"
             android:layout_gravity="center"/>
