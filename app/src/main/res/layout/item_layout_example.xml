@@ -1,44 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/tv_usage_example"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Example usage of a word."
-            android:textSize="16sp"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp"
-            android:textColor="@color/text_color"
-            android:fontFamily="sans-serif-medium"
-            android:lineSpacingExtra="4dp"
-            android:paddingBottom="8dp" />
-
-        <TextView
-            android:id="@+id/tv_usage_difficulty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A1"
-            android:textSize="14sp"
-            android:layout_marginEnd="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif-medium"
+            android:lineSpacingExtra="4dp"
+            android:paddingEnd="40dp"
+            android:text="Example usage of a word."
             android:textColor="@color/text_color"
-            android:fontFamily="sans-serif-light"
-            android:paddingTop="4dp"
-            android:layout_gravity="end" />
-    </LinearLayout>
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="Mic Icon"
+            android:src="@drawable/ic_mic"
+            app:tint="@color/blue"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

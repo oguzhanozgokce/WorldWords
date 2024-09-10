@@ -43,4 +43,9 @@ class SharedPreferencesDataSource @Inject constructor(
         currentWords.remove(word)
         saveLearnedWords(currentWords)
     }
+
+    fun isWordInLearnedList(word: Word): Boolean {
+        val learnedWords = getLearnedWords()
+        return learnedWords.contains(word)
+    }
 }

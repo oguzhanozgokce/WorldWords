@@ -22,6 +22,9 @@
         <argument
             android:name="word"
             app:argType="com.oguzhanozgokce.worldwords.model.Word" />
+        <action
+            android:id="@+id/action_wordDetailFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
     </fragment>
     <fragment
         android:id="@+id/learnedWordFragment"

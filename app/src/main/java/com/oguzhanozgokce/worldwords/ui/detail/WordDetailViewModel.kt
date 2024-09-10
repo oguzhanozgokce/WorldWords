@@ -35,4 +35,8 @@ class WordDetailViewModel @Inject constructor(
         wordRepository.addWordToLearnedList(word)
         _learnedWordList.value = wordRepository.getLearnedWords()
     }
+
+    fun isWordInLearnedList(word: Word): Boolean {
+        return wordRepository.isWordInLearnedList(word)
+    }
 }

@@ -21,4 +21,9 @@ class LearnedWordViewModel @Inject constructor(private val wordRepository: WordR
     private fun loadLearnedWords() {
         _learnedWords.value = wordRepository.getLearnedWords()
     }
+
+     fun deleteWord(word: Word) {
+       wordRepository.removeWordFromLearnedList(word)
+        _learnedWords.value = wordRepository.getLearnedWords()
+    }
 }

@@ -11,6 +11,7 @@
     <color name="yellow">#FFFFFF00</color>
     <color name="purple">#FF800080</color>
     <color name="orange">#FFFFA500</color>
+    <color name="light_orange">#E1F5FE</color>
     <color name="pink">#FFFFC0CB</color>
     <color name="brown">#FFA52A2A</color>
     <color name="background_color">#1f2030</color>
@@ -20,4 +21,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="lighter_gray">#E0E0E0</color>
     <color name="text_color">#3c3c3c</color>
+    <color name="background">#B3E5FC</color>
+    <color name="bottom_nav">#03A9F4</color>
 </resources>
