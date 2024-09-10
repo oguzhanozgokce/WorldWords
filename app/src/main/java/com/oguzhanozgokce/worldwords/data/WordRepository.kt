@@ -348,4 +348,8 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         sharedPreferencesDataSource.removeLearnedWord(word)
     }
 
+    fun isWordInLearnedList(word: Word): Boolean {
+        return sharedPreferencesDataSource.isWordInLearnedList(word)
+    }
+
 }
