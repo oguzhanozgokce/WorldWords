@@ -14,11 +14,8 @@ class LearnedWordViewModel @Inject constructor(private val wordRepository: WordR
     private val _learnedWords = MutableStateFlow<List<Word>>(emptyList())
     val learnedWords: StateFlow<List<Word>> get() = _learnedWords
 
-    init {
-        loadLearnedWords()
-    }
 
-    private fun loadLearnedWords() {
+    fun getLearnedWords() {
         _learnedWords.value = wordRepository.getLearnedWords()
     }
 

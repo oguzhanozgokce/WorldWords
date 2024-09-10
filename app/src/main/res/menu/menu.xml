@@ -8,5 +8,10 @@
         android:id="@+id/learnedWordFragment"
         android:icon="@drawable/baseline_home_24"
         android:title="Learned"/>
+    <item
+        android:id="@+id/saveFragment"
+        android:icon="@drawable/ic_bookmark_24"
+        android:title="Save"/>
+
 
 </menu>

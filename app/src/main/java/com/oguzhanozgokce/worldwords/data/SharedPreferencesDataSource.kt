@@ -13,6 +13,7 @@ class SharedPreferencesDataSource @Inject constructor(
 
     companion object {
         private const val LEARNED_WORDS_KEY = "learned_words_key"
+        private const val SAVED_WORDS_KEY = "saved_words_key"
     }
 
     private fun saveLearnedWords(words: List<Word>) {
@@ -47,5 +48,39 @@ class SharedPreferencesDataSource @Inject constructor(
     fun isWordInLearnedList(word: Word): Boolean {
         val learnedWords = getLearnedWords()
         return learnedWords.contains(word)
+    }
+
+    private fun saveSavedWords(words: List<Word>) {
+        val editor = sharedPreferences.edit()
+        val json = gson.toJson(words)
+        editor.putString(SAVED_WORDS_KEY, json)
+        editor.apply()
+    }
+
+    fun getSavedWords(): List<Word> {
+        val json = sharedPreferences.getString(SAVED_WORDS_KEY, null)
+        return if (json != null) {
+            val type = object : TypeToken<List<Word>>() {}.type
+            gson.fromJson(json, type)
+        } else {
+            emptyList()
+        }
+    }
+
+    fun addSavedWord(word: Word) {
+        val currentWords = getSavedWords().toMutableList()
+        currentWords.add(word)
+        saveSavedWords(currentWords)
+    }
+
+    fun removeSavedWord(word: Word) {
+        val currentWords = getSavedWords().toMutableList()
+        currentWords.remove(word)
+        saveSavedWords(currentWords)
+    }
+
+    fun isWordInSavedList(word: Word): Boolean {
+        val savedWords = getSavedWords()
+        return savedWords.contains(word)
     }
 }

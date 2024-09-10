@@ -46,6 +46,7 @@ class WordDetailFragment : Fragment() {
         setupRecyclerView()
         observeUsageExamples(selectedWord)
         addWordToLearnedList(selectedWord)
+        toggleSaveButton(selectedWord)
 
         textToSpeech = TextToSpeech(requireContext()) { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -67,6 +68,9 @@ class WordDetailFragment : Fragment() {
             binding.iwBack.setOnClickListener {
                 findNavController().navigateUp()
             }
+            binding.ivSelectedWord.setOnClickListener {
+                toggleSaveButton(word)
+            }
         }
     }
 
@@ -80,7 +84,6 @@ class WordDetailFragment : Fragment() {
             adapter = examplesAdapter
         }
     }
-
 
     private fun speakWord(word: String) {
         textToSpeech.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
@@ -120,6 +123,34 @@ class WordDetailFragment : Fragment() {
         dialog.window?.setBackgroundDrawableResource(R.drawable.custom_dialog_background)
         dialog.show()
     }
+
+    private fun toggleSaveButton(word: Word) {
+        updateSaveButtonState(word)
+
+        binding.iwSaveWord.setOnClickListener {
+            val isSaved = wordDetailViewModel.isWordInSavedList(word)
+
+            if (isSaved) {
+                wordDetailViewModel.removeWordFromSavedList(word)
+                binding.iwSaveWord.setImageResource(R.drawable.ic_bookmark_add_24)
+                Toast.makeText(requireContext(), "${word.english} removed from saved list", Toast.LENGTH_SHORT).show()
+            } else {
+                wordDetailViewModel.addWordToSavedList(word)
+                binding.iwSaveWord.setImageResource(R.drawable.ic_bookmark_added_24)
+                Toast.makeText(requireContext(), "${word.english} added to saved list", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun updateSaveButtonState(word: Word) {
+        val isSaved = wordDetailViewModel.isWordInSavedList(word)
+        if (isSaved) {
+            binding.iwSaveWord.setImageResource(R.drawable.ic_bookmark_added_24)
+        } else {
+            binding.iwSaveWord.setImageResource(R.drawable.ic_bookmark_add_24)
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

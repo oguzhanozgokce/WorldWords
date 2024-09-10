@@ -22,10 +22,9 @@ class WordDetailViewModel @Inject constructor(
     private val _usageExamples = MutableStateFlow<List<String>>(emptyList())
     val usageExamples: StateFlow<List<String>> get() = _usageExamples
 
-    fun loadWordDetails(word: Word) {
-        _selectedWord.value = word
-        _usageExamples.value = wordRepository.getUsageExamples(word) ?: emptyList()
-    }
+    private val _saveWordList = MutableStateFlow<List<Word>>(emptyList())
+    val saveWordList: StateFlow<List<Word>> get() = _saveWordList
+
 
     fun loadUsageExamples(word: Word) {
         _usageExamples.value = wordRepository.getUsageExamples(word) ?: emptyList()
@@ -38,5 +37,19 @@ class WordDetailViewModel @Inject constructor(
 
     fun isWordInLearnedList(word: Word): Boolean {
         return wordRepository.isWordInLearnedList(word)
+    }
+
+    fun addWordToSavedList(word: Word) {
+        wordRepository.addSavedWord(word)
+        _saveWordList.value = wordRepository.getSavedWords()
+    }
+
+    fun removeWordFromSavedList(word: Word) {
+        wordRepository.removeSavedWord(word)
+        _saveWordList.value = wordRepository.getSavedWords()
+    }
+
+    fun isWordInSavedList(word: Word): Boolean {
+        return wordRepository.isWordSaved(word)
     }
 }

@@ -311,7 +311,6 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         )
     )
 
-
     fun getWords(): List<Word> {
         return wordList
     }
@@ -350,6 +349,22 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
 
     fun isWordInLearnedList(word: Word): Boolean {
         return sharedPreferencesDataSource.isWordInLearnedList(word)
+    }
+
+    fun getSavedWords(): List<Word> {
+        return sharedPreferencesDataSource.getSavedWords()
+    }
+
+    fun addSavedWord(word: Word) {
+        sharedPreferencesDataSource.addSavedWord(word)
+    }
+
+    fun removeSavedWord(word: Word) {
+        sharedPreferencesDataSource.removeSavedWord(word)
+    }
+
+    fun isWordSaved(word: Word): Boolean {
+        return sharedPreferencesDataSource.isWordInSavedList(word)
     }
 
 }

@@ -42,6 +42,7 @@ class LearnedWordFragment : Fragment() {
 
         setupRecyclerView()
         observeLearnedWords()
+        learnedWordViewModel.getLearnedWords()
 
         textToSpeech = TextToSpeech(requireContext()) { status ->
             if (status == TextToSpeech.SUCCESS) {
