@@ -12,6 +12,8 @@
         android:id="@+id/saveFragment"
         android:icon="@drawable/ic_bookmark_24"
         android:title="Save"/>
-
-
+    <item
+        android:id="@+id/wordGameFragment"
+        android:icon="@drawable/ic_games_24"
+        android:title="Game"/>
 </menu>

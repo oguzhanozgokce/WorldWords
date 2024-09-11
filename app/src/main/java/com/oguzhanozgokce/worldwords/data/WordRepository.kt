@@ -5,6 +5,7 @@ import com.oguzhanozgokce.worldwords.model.Word
 import javax.inject.Inject
 
 class WordRepository @Inject constructor(private val sharedPreferencesDataSource: SharedPreferencesDataSource) {
+
     private val wordList = mutableListOf(
         Word("elma", "apple", 1, R.drawable.ic_apple),
         Word("kitap", "book", 1, R.drawable.ic_book),
@@ -366,5 +367,4 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
     fun isWordSaved(word: Word): Boolean {
         return sharedPreferencesDataSource.isWordInSavedList(word)
     }
-
 }

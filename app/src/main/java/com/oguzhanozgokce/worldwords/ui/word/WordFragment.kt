@@ -52,6 +52,11 @@ class WordFragment : Fragment() {
                 Log.e("TextToSpeech", "Initialization failed")
             }
         }
+
+        binding.iwAddWord.setOnClickListener(){
+            navigateToCustomWord()
+        }
+
     }
 
     private fun setupRecyclerView() {
@@ -69,6 +74,11 @@ class WordFragment : Fragment() {
 
     private fun navigateToWordDetail(word: Word) {
         val action = WordFragmentDirections.actionWordFragmentToWordDetailFragment(word)
+        findNavController().navigate(action)
+    }
+
+    private fun navigateToCustomWord() {
+        val action = WordFragmentDirections.actionWordFragmentToCustomWordFragment()
         findNavController().navigate(action)
     }
 

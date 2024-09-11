@@ -1,0 +1,302 @@
+[
+  {
+    "turkish": "elma",
+    "english": "apple",
+    "difficulty": 1,
+    "image": "ic_apple"
+  },
+  {
+    "turkish": "kitap",
+    "english": "book",
+    "difficulty": 1,
+    "image": "ic_book"
+  },
+  {
+    "turkish": "araba",
+    "english": "car",
+    "difficulty": 1,
+    "image": "ic_car"
+  },
+  {
+    "turkish": "masa",
+    "english": "table",
+    "difficulty": 1,
+    "image": "ic_table"
+  },
+  {
+    "turkish": "kalem",
+    "english": "pen",
+    "difficulty": 1,
+    "image": "ic_pen"
+  },
+  {
+    "turkish": "bilgisayar",
+    "english": "computer",
+    "difficulty": 1,
+    "image": "ic_computer"
+  },
+  {
+    "turkish": "kedi",
+    "english": "cat",
+    "difficulty": 1,
+    "image": "ic_cat"
+  },
+  {
+    "turkish": "köpek",
+    "english": "dog",
+    "difficulty": 1,
+    "image": "ic_dog"
+  },
+  {
+    "turkish": "su",
+    "english": "water",
+    "difficulty": 1,
+    "image": "ic_water"
+  },
+  {
+    "turkish": "ekmek",
+    "english": "bread",
+    "difficulty": 1,
+    "image": "ic_bread"
+  },
+  {
+    "turkish": "çiçek",
+    "english": "flower",
+    "difficulty": 1,
+    "image": "ic_flower"
+  },
+  {
+    "turkish": "gözlük",
+    "english": "glasses",
+    "difficulty": 1,
+    "image": "ic_glasses"
+  },
+  {
+    "turkish": "telefon",
+    "english": "phone",
+    "difficulty": 1,
+    "image": "ic_phone"
+  },
+  {
+    "turkish": "bina",
+    "english": "building",
+    "difficulty": 1,
+    "image": "ic_building"
+  },
+  {
+    "turkish": "uçak",
+    "english": "plane",
+    "difficulty": 1,
+    "image": "ic_plane"
+  },
+  {
+    "turkish": "bisiklet",
+    "english": "bicycle",
+    "difficulty": 1,
+    "image": "ic_bicycle"
+  },
+  {
+    "turkish": "el",
+    "english": "hand",
+    "difficulty": 1,
+    "image": "ic_hand"
+  },
+  {
+    "turkish": "güneş",
+    "english": "sun",
+    "difficulty": 1,
+    "image": "ic_sun"
+  },
+  {
+    "turkish": "çanta",
+    "english": "bag",
+    "difficulty": 1,
+    "image": "ic_bag"
+  },
+  {
+    "turkish": "yatak",
+    "english": "bed",
+    "difficulty": 1,
+    "image": "ic_bed"
+  },
+  {
+    "turkish": "ayakkabı",
+    "english": "shoe",
+    "difficulty": 1,
+    "image": "ic_shoe"
+  },
+  {
+    "turkish": "sandalye",
+    "english": "chair",
+    "difficulty": 1,
+    "image": "ic_chair"
+  },
+  {
+    "turkish": "yemek",
+    "english": "food",
+    "difficulty": 1,
+    "image": "ic_food"
+  },
+  {
+    "turkish": "kapı",
+    "english": "door",
+    "difficulty": 1,
+    "image": "ic_door"
+  },
+  {
+    "turkish": "pencere",
+    "english": "window",
+    "difficulty": 1,
+    "image": "ic_window"
+  },
+  {
+    "turkish": "ağaç",
+    "english": "tree",
+    "difficulty": 1,
+    "image": "ic_tree"
+  },
+  {
+    "turkish": "otobüs",
+    "english": "bus",
+    "difficulty": 1,
+    "image": "ic_bus"
+  },
+  {
+    "turkish": "deniz",
+    "english": "sea",
+    "difficulty": 1,
+    "image": "ic_sea"
+  },
+  {
+    "turkish": "park",
+    "english": "park",
+    "difficulty": 1,
+    "image": "ic_park"
+  },
+  {
+    "turkish": "dağ",
+    "english": "mountain",
+    "difficulty": 1,
+    "image": "ic_mountain"
+  },
+  {
+    "turkish": "toplantı",
+    "english": "meeting",
+    "difficulty": 2,
+    "image": "ic_meet"
+  },
+  {
+    "turkish": "öğrenci",
+    "english": "student",
+    "difficulty": 2,
+    "image": "ic_student"
+  },
+  {
+    "turkish": "üniversite",
+    "english": "university",
+    "difficulty": 2,
+    "image": "ic_university"
+  },
+  {
+    "turkish": "yabancı",
+    "english": "foreigner",
+    "difficulty": 2,
+    "image": "ic_foreigner"
+  },
+  {
+    "turkish": "başarı",
+    "english": "success",
+    "difficulty": 2,
+    "image": "ic_success"
+  },
+  {
+    "turkish": "geliştirmek",
+    "english": "improve",
+    "difficulty": 2,
+    "image": "ic_improve"
+  },
+  {
+    "turkish": "teknoloji",
+    "english": "technology",
+    "difficulty": 2,
+    "image": "ic_technology"
+  },
+  {
+    "turkish": "müzik",
+    "english": "music",
+    "difficulty": 2,
+    "image": "ic_music"
+  },
+  {
+    "turkish": "sohbet",
+    "english": "conversation",
+    "difficulty": 2,
+    "image": "ic_conversation"
+  },
+  {
+    "turkish": "doğa",
+    "english": "nature",
+    "difficulty": 2,
+    "image": "ic_nature"
+  },
+  {
+    "turkish": "keşfetmek",
+    "english": "explore",
+    "difficulty": 2,
+    "image": "ic_explore"
+  },
+  {
+    "turkish": "kültür",
+    "english": "culture",
+    "difficulty": 2,
+    "image": "ic_culture"
+  },
+  {
+    "turkish": "tecrübe",
+    "english": "experience",
+    "difficulty": 2,
+    "image": "ic_experience"
+  },
+  {
+    "turkish": "felsefe",
+    "english": "philosophy",
+    "difficulty": 2,
+    "image": "ic_philosophy"
+  },
+  {
+    "turkish": "tatil",
+    "english": "vacation",
+    "difficulty": 2,
+    "image": "ic_vacation"
+  },
+  {
+    "turkish": "ekonomi",
+    "english": "economy",
+    "difficulty": 2,
+    "image": "ic_economic"
+  },
+  {
+    "turkish": "karmaşıklık",
+    "english": "complexity",
+    "difficulty": 3,
+    "image": "ic_complexity"
+  },
+  {
+    "turkish": "strateji",
+    "english": "strategy",
+    "difficulty": 3,
+    "image": "ic_strategy"
+  },
+  {
+    "turkish": "analiz",
+    "english": "analysis",
+    "difficulty": 3,
+    "image": "ic_analysis"
+  },
+  {
+    "turkish": "planlama",
+    "english": "planning",
+    "difficulty": 3,
+    "image": "ic_planning"
+  }
+]
