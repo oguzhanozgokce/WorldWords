@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_wordFragment_to_wordDetailFragment"
             app:destination="@id/wordDetailFragment" />
+        <action
+            android:id="@+id/action_wordFragment_to_customWordFragment"
+            app:destination="@id/customWordFragment" />
     </fragment>
     <fragment
         android:id="@+id/wordDetailFragment"
@@ -40,4 +43,14 @@
             android:id="@+id/action_saveFragment_to_wordDetailFragment"
             app:destination="@id/wordDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/customWordFragment"
+        android:name="com.oguzhanozgokce.worldwords.ui.customword.CustomWordFragment"
+        android:label="fragment_custom_word"
+        tools:layout="@layout/fragment_custom_word" />
+    <fragment
+        android:id="@+id/wordGameFragment"
+        android:name="com.oguzhanozgokce.worldwords.ui.game.WordGameFragment"
+        android:label="fragment_word_game"
+        tools:layout="@layout/fragment_word_game" />
 </navigation>

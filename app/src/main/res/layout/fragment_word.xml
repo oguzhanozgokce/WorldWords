@@ -11,9 +11,8 @@
 
     <TextView
         android:id="@+id/tv_turkish_header"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,6 +23,18 @@
         android:textColor="@color/text_color"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iw_add_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_add_24"
+        android:background="@drawable/rounded_background"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <View
         android:id="@+id/view"
@@ -51,5 +62,6 @@
             android:padding="16dp" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
