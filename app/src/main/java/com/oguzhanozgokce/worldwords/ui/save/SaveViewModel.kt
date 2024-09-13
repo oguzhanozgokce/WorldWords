@@ -18,4 +18,8 @@ class SaveViewModel @Inject constructor(
      fun getSavedWords() {
         _saveWordList.value = wordRepository.getSavedWords()
     }
+
+    fun isLearningListEmpty(): Boolean {
+        return wordRepository.isSavedListEmpty()
+    }
 }

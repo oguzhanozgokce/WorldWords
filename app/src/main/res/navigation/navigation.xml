@@ -33,7 +33,11 @@
         android:id="@+id/learnedWordFragment"
         android:name="com.oguzhanozgokce.worldwords.ui.learnedword.LearnedWordFragment"
         android:label="fragment_learned_word"
-        tools:layout="@layout/fragment_learned_word" />
+        tools:layout="@layout/fragment_learned_word" >
+        <action
+            android:id="@+id/action_learnedWordFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/saveFragment"
         android:name="com.oguzhanozgokce.worldwords.ui.save.SaveFragment"
@@ -42,6 +46,9 @@
         <action
             android:id="@+id/action_saveFragment_to_wordDetailFragment"
             app:destination="@id/wordDetailFragment" />
+        <action
+            android:id="@+id/action_saveFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
     </fragment>
     <fragment
         android:id="@+id/customWordFragment"
