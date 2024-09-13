@@ -20,13 +20,17 @@ class WordGameAdapter(
 
         fun bind(word: Word, showEnglish: Boolean, isSelected: Boolean) {
             if (showEnglish) {
-                binding.tvEnglishWord.text = word.english
-                binding.tvEnglishWord.visibility = View.VISIBLE
-                binding.tvTurkishWord.visibility = View.GONE
+                with(binding){
+                    tvEnglishWord.text = word.english
+                    tvEnglishWord.visibility = View.VISIBLE
+                    tvTurkishWord.visibility = View.GONE
+                }
             } else {
-                binding.tvTurkishWord.text = word.turkish
-                binding.tvTurkishWord.visibility = View.VISIBLE
-                binding.tvEnglishWord.visibility = View.GONE
+                with(binding){
+                    tvTurkishWord.text = word.turkish
+                    tvTurkishWord.visibility = View.VISIBLE
+                    tvEnglishWord.visibility = View.GONE
+                }
             }
 
             if (isSelected) {

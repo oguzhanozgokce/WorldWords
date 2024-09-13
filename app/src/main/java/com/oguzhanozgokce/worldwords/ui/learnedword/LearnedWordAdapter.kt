@@ -3,8 +3,7 @@ package com.oguzhanozgokce.worldwords.ui.learnedword
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.oguzhanozgokce.worldwords.R
+import com.oguzhanozgokce.worldwords.common.loadImage
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutLearnedWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 
@@ -19,11 +18,7 @@ class LearnedWordAdapter(
             with(binding){
                 tvTurkishWord.text = word.turkish
                 tvEnglishWord.text = word.english
-                Glide.with(wordImage.context)
-                    .load(word.image)
-                    .placeholder(R.drawable.ic_words)
-                    .error(R.drawable.ic_words)
-                    .into(wordImage)
+                wordImage.loadImage(word.image)
                 root.setOnLongClickListener {
                     onMicClick(word)
                     true
