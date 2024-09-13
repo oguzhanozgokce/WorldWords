@@ -1,47 +1,36 @@
 package com.oguzhanozgokce.worldwords.ui.save
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
+import com.oguzhanozgokce.worldwords.common.BaseFragment
 import com.oguzhanozgokce.worldwords.databinding.FragmentSaveBinding
+import com.oguzhanozgokce.worldwords.helper.TextToSpeechHelper
 import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class SaveFragment : Fragment() {
-    private var _binding: FragmentSaveBinding? = null
-    private val binding get() = _binding!!
+class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::inflate) {
+
     private val saveViewModel: SaveViewModel by viewModels()
     private lateinit var saveAdapter: SaveAdapter
+    private lateinit var ttsHelper: TextToSpeechHelper
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentSaveBinding.inflate(inflater,container,false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun FragmentSaveBinding.bind() {
         setupRecyclerView()
         observeSavedWords()
+        ttsHelper = TextToSpeechHelper(requireContext())
         saveViewModel.getSavedWords()
     }
 
-    private fun setupRecyclerView() {
-        saveAdapter = SaveAdapter(emptyList()) { word ->
-            navigateToWordDetail(word)
-        }
-        binding.rwSave.adapter = saveAdapter
+    private fun FragmentSaveBinding.setupRecyclerView() {
+        saveAdapter = SaveAdapter(
+            emptyList(),
+            onItemClick = { word -> navigateToWordDetail(word) },
+            onMickClick = { word -> speakEnglishWord(word) }
+        )
+        rwSave.adapter = saveAdapter
     }
 
     private fun observeSavedWords() {
@@ -52,6 +41,8 @@ class SaveFragment : Fragment() {
         }
     }
 
+    private fun speakEnglishWord(word: Word) = ttsHelper.speak(word.english)
+
     private fun navigateToWordDetail(word: Word) {
         val action = SaveFragmentDirections.actionSaveFragmentToWordDetailFragment(word)
         findNavController().navigate(action)
@@ -59,6 +50,6 @@ class SaveFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding = null
+        ttsHelper.shutdown()
     }
 }

@@ -6,43 +6,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
+import com.oguzhanozgokce.worldwords.common.BaseFragment
+import com.oguzhanozgokce.worldwords.common.showToast
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordGameBinding
 import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class WordGameFragment : Fragment() {
-    private var _binding: FragmentWordGameBinding? = null
-    private val binding get() = _binding!!
+class WordGameFragment : BaseFragment<FragmentWordGameBinding>(FragmentWordGameBinding::inflate) {
+
     private val wordGameViewModel: WordGameViewModel by viewModels()
     private lateinit var wordGameAdapter: WordGameAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentWordGameBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun FragmentWordGameBinding.bind() {
         setupRecyclerView()
         observeWordPairs()
     }
 
-
-    private fun setupRecyclerView() {
+    private fun FragmentWordGameBinding.setupRecyclerView() {
         wordGameAdapter = WordGameAdapter(emptyList()) { clickedWord ->
-            Toast.makeText(requireContext(), "Clicked: ${clickedWord.english}", Toast.LENGTH_SHORT).show()
+            requireContext().showToast("Clicked: ${clickedWord.english}")
         }
-        binding.rwWordGame.adapter = wordGameAdapter
+        rwWordGame.adapter = wordGameAdapter
     }
-
 
     private fun observeWordPairs() {
         viewLifecycleOwner.lifecycleScope.launch {
@@ -55,11 +46,5 @@ class WordGameFragment : Fragment() {
                 wordGameAdapter.updateWords(mixedWords)
             }
         }
-    }
-
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
     }
 }

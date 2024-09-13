@@ -16,6 +16,8 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.oguzhanozgokce.worldwords.R
+import com.oguzhanozgokce.worldwords.common.showCustomAlertDialog
+import com.oguzhanozgokce.worldwords.common.showToast
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordDetailBinding
 import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
@@ -90,7 +92,7 @@ class WordDetailFragment : Fragment() {
 
     private fun setupTurkishRecyclerView() {
         examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(emptyList()) { example ->
-            Toast.makeText(requireContext(), "Tıklanan örnek: $example", Toast.LENGTH_SHORT).show()
+            requireContext().showToast("Clicked : $example")
         }
         binding.rwMeaning.adapter = examplesTurkishUseAdapter
     }
@@ -124,21 +126,17 @@ class WordDetailFragment : Fragment() {
                 showWordAlreadyExistsDialog(word)
             } else {
                 wordDetailViewModel.addWordToLearnedList(word)
-                Toast.makeText(requireContext(), "${word.english} added to learned list", Toast.LENGTH_SHORT).show()
+                requireContext().showToast("${word.english} added to learned list")
             }
         }
     }
 
     private fun showWordAlreadyExistsDialog(word: Word) {
-        val dialog = AlertDialog.Builder(requireContext())
-            .setTitle("Already Exists")
-            .setMessage("${word.english} is already in the learned list")
-            .setPositiveButton("OK") { dialogInterface, _ ->
-                dialogInterface.dismiss()
-            }
-            .create()
-        dialog.window?.setBackgroundDrawableResource(R.drawable.custom_dialog_background)
-        dialog.show()
+        showCustomAlertDialog(
+            title = "Already Exists",
+            message = "${word.english} is already in the learned list",
+            positiveButtonText = "OK"
+        )
     }
 
     private fun toggleSaveButton(word: Word) {
