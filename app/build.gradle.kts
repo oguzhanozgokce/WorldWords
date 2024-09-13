@@ -66,5 +66,13 @@ dependencies {
     //Glide
     implementation(libs.com.github.bumptech.glide)
     kapt(libs.com.github.bumptech.glide.compiler)
+    //test
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.mockito.inline)
+    testImplementation (libs.kotlinx.coroutines.test)
+    testImplementation (libs.androidx.core)
+    testImplementation (libs.mockito.kotlin)
+
+
 
 }
