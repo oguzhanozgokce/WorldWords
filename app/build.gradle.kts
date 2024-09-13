@@ -63,4 +63,8 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     //Gson
     implementation(libs.com.google.code.gson)
+    //Glide
+    implementation(libs.com.github.bumptech.glide)
+    kapt(libs.com.github.bumptech.glide.compiler)
+
 }

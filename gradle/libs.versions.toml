@@ -17,6 +17,7 @@ hiltAndroidCompiler = "2.52"
 navigation = "2.8.0"
 swiperefreshlayout = "1.1.0"
 gson = "2.10.1"
+glide = "4.16.0"
 
 
 [libraries]
@@ -37,6 +38,9 @@ androidx-core-testing = { module = "androidx.arch.core:core-testing", version.re
 androidx-fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentTesting" }
 androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
 com-google-code-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+com-github-bumptech-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+com-github-bumptech-glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
