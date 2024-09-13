@@ -5,7 +5,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.oguzhanozgokce.worldwords.common.BaseFragment
+import com.oguzhanozgokce.worldwords.common.gone
+import com.oguzhanozgokce.worldwords.common.navigateTo
 import com.oguzhanozgokce.worldwords.common.showCustomAlertDialog
+import com.oguzhanozgokce.worldwords.common.visible
 import com.oguzhanozgokce.worldwords.databinding.FragmentLearnedWordBinding
 import com.oguzhanozgokce.worldwords.helper.TextToSpeechHelper
 import com.oguzhanozgokce.worldwords.model.Word
@@ -37,10 +40,11 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
 
     private fun speakEnglishWord(word: Word) = ttsHelper.speak(word.english)
 
-    private fun observeLearnedWords() {
+    private fun FragmentLearnedWordBinding.observeLearnedWords() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 learnedWordViewModel.learnedWords.collect { words ->
+                    isView()
                     learnedWordAdapter.updateWords(words)
                 }
             }
@@ -59,6 +63,32 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
             onPositiveAction = { deleteWordFromLearnedList(word) },
             negativeButtonText = "Cancel"
         )
+    }
+
+    private fun FragmentLearnedWordBinding.showEmptyLearnedScreen() {
+        emptyLayout.visible()
+        rwLearnedWord.gone()
+        emptyActionButton.setOnClickListener {
+            navigateToWord()
+        }
+    }
+
+    private fun FragmentLearnedWordBinding.hideEmptyLearnedScreen() {
+        emptyLayout.gone()
+        rwLearnedWord.visible()
+    }
+
+    private fun FragmentLearnedWordBinding.isView() {
+        if (learnedWordViewModel.isLearningListEmpty()) {
+            showEmptyLearnedScreen()
+        } else {
+            hideEmptyLearnedScreen()
+        }
+    }
+
+    private fun navigateToWord(){
+        val action = LearnedWordFragmentDirections.actionLearnedWordFragmentToWordFragment()
+        navigateTo(action)
     }
 
     override fun onDestroyView() {

@@ -98,6 +98,11 @@ class SharedPreferencesDataSource @Inject constructor(
         return learnedWords.contains(word)
     }
 
+    fun isLearningListEmpty(): Boolean {
+        val learnedWords = getLearnedWords()
+        return learnedWords.isEmpty()
+    }
+
     private fun saveSavedWords(words: List<Word>) {
         val editor = sharedPreferences.edit()
         val json = gson.toJson(words)
@@ -130,5 +135,10 @@ class SharedPreferencesDataSource @Inject constructor(
     fun isWordInSavedList(word: Word): Boolean {
         val savedWords = getSavedWords()
         return savedWords.contains(word)
+    }
+
+    fun isSavedListEmpty(): Boolean {
+        val savedWords = getSavedWords()
+        return savedWords.isEmpty()
     }
 }

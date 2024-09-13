@@ -28,4 +28,9 @@ class LearnedWordViewModel @Inject constructor(private val wordRepository: WordR
         wordRepository.addWord(word)
         _wordList.value = wordRepository.getWords()
     }
+
+    fun isLearningListEmpty(): Boolean {
+        return wordRepository.isLearningListEmpty()
+    }
+
 }

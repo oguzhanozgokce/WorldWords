@@ -566,6 +566,10 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         return sharedPreferencesDataSource.isWordInLearnedList(word)
     }
 
+    fun isLearningListEmpty(): Boolean {
+        return sharedPreferencesDataSource.isLearningListEmpty()
+    }
+
     fun getSavedWords(): List<Word> {
         return sharedPreferencesDataSource.getSavedWords()
     }
@@ -580,6 +584,10 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
 
     fun isWordSaved(word: Word): Boolean {
         return sharedPreferencesDataSource.isWordInSavedList(word)
+    }
+
+    fun isSavedListEmpty(): Boolean {
+        return sharedPreferencesDataSource.isSavedListEmpty()
     }
 
     fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String) {
