@@ -3,16 +3,14 @@ package com.oguzhanozgokce.worldwords.ui.word
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
@@ -27,7 +25,6 @@ class WordFragment : Fragment() {
     private lateinit var wordAdapter: WordAdapter
     private lateinit var textToSpeech: TextToSpeech
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,7 +38,7 @@ class WordFragment : Fragment() {
         setupRecyclerView()
         setupSwipeToRefresh()
         observeWordList()
-
+        wordViewModel.loadWords()
         textToSpeech = TextToSpeech(requireContext()) { status ->
             if (status == TextToSpeech.SUCCESS) {
                 val result = textToSpeech.setLanguage(Locale.ENGLISH)
@@ -52,11 +49,9 @@ class WordFragment : Fragment() {
                 Log.e("TextToSpeech", "Initialization failed")
             }
         }
-
-        binding.iwAddWord.setOnClickListener(){
+        binding.iwAddWord.setOnClickListener{
             navigateToCustomWord()
         }
-
     }
 
     private fun setupRecyclerView() {

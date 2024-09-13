@@ -6,5 +6,5 @@ data class Word(
     val turkish: String,
     val english: String,
     val difficulty: Int,
-    val image: Int,
+    val image: String
 ) : Serializable

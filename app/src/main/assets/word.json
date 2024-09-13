@@ -3,300 +3,300 @@
     "turkish": "elma",
     "english": "apple",
     "difficulty": 1,
-    "image": "ic_apple"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_apple.png?alt=media&token=6bcced5a-519d-4fc5-8079-3620234f6a07"
   },
   {
     "turkish": "kitap",
     "english": "book",
     "difficulty": 1,
-    "image": "ic_book"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_book.png?alt=media&token=dc47ff62-8586-4328-85fe-1f9029cb610a"
   },
   {
     "turkish": "araba",
     "english": "car",
     "difficulty": 1,
-    "image": "ic_car"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_car.png?alt=media&token=4d1bf9b3-284d-437b-8f2e-ab35317dfa5b"
   },
   {
     "turkish": "masa",
     "english": "table",
     "difficulty": 1,
-    "image": "ic_table"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_table.svg?alt=media&token=d14b62b3-4749-412f-8544-16806974f3fd"
   },
   {
     "turkish": "kalem",
     "english": "pen",
     "difficulty": 1,
-    "image": "ic_pen"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_pen.png?alt=media&token=5de4e82c-8c70-4b53-b024-e732592b8b6a"
   },
   {
     "turkish": "bilgisayar",
     "english": "computer",
     "difficulty": 1,
-    "image": "ic_computer"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_computer.png?alt=media&token=f45c2e83-7a54-4522-95db-c7023debacbf"
   },
   {
     "turkish": "kedi",
     "english": "cat",
     "difficulty": 1,
-    "image": "ic_cat"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_cat.png?alt=media&token=ec37703d-7506-4fdf-830b-b4517fd5872c"
   },
   {
     "turkish": "köpek",
     "english": "dog",
     "difficulty": 1,
-    "image": "ic_dog"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_dog.png?alt=media&token=660c5633-6e95-4d68-ba63-41f1119d6166"
   },
   {
     "turkish": "su",
     "english": "water",
     "difficulty": 1,
-    "image": "ic_water"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_water.png?alt=media&token=2797ee23-8f1f-4093-b971-a71101fe9f86"
   },
   {
     "turkish": "ekmek",
     "english": "bread",
     "difficulty": 1,
-    "image": "ic_bread"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bread.png?alt=media&token=313ee4b5-cefc-4ef7-8ff7-75dcae45d811"
   },
   {
     "turkish": "çiçek",
     "english": "flower",
     "difficulty": 1,
-    "image": "ic_flower"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_flower.png?alt=media&token=8382307d-f682-4f3a-8911-7605aa71d9ae"
   },
   {
     "turkish": "gözlük",
     "english": "glasses",
     "difficulty": 1,
-    "image": "ic_glasses"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_glasses.png?alt=media&token=03a61d32-1e2a-4424-898b-9ae853c21ab8"
   },
   {
     "turkish": "telefon",
     "english": "phone",
     "difficulty": 1,
-    "image": "ic_phone"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_phone.png?alt=media&token=09bf5067-e527-47fe-9658-9b3296d8b60b"
   },
   {
     "turkish": "bina",
     "english": "building",
     "difficulty": 1,
-    "image": "ic_building"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_building.png?alt=media&token=6141a253-8b2e-49ec-ab43-016553d0edff"
   },
   {
     "turkish": "uçak",
     "english": "plane",
     "difficulty": 1,
-    "image": "ic_plane"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_plane.png?alt=media&token=4eb25402-8b7e-444e-8872-3883e0e9fb7a"
   },
   {
     "turkish": "bisiklet",
     "english": "bicycle",
     "difficulty": 1,
-    "image": "ic_bicycle"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bicycle.png?alt=media&token=ad722037-fd66-4c6e-9f7e-709002491d5b"
   },
   {
     "turkish": "el",
     "english": "hand",
     "difficulty": 1,
-    "image": "ic_hand"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/hand.png?alt=media&token=74c6edb5-1d65-419e-8e50-e591567c238e"
   },
   {
     "turkish": "güneş",
     "english": "sun",
     "difficulty": 1,
-    "image": "ic_sun"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sun.png?alt=media&token=6e23a2de-cb0b-43f5-a7c5-9be4f9b16cf7"
   },
   {
     "turkish": "çanta",
     "english": "bag",
     "difficulty": 1,
-    "image": "ic_bag"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bag.png?alt=media&token=fbf3a767-36ed-4479-94c9-e174d321d89a"
   },
   {
     "turkish": "yatak",
     "english": "bed",
     "difficulty": 1,
-    "image": "ic_bed"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bag.png?alt=media&token=fbf3a767-36ed-4479-94c9-e174d321d89a"
   },
   {
     "turkish": "ayakkabı",
     "english": "shoe",
     "difficulty": 1,
-    "image": "ic_shoe"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_shoe.png?alt=media&token=26e8672d-89bd-429e-ada2-082551d2b19e"
   },
   {
     "turkish": "sandalye",
     "english": "chair",
     "difficulty": 1,
-    "image": "ic_chair"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_chair.png?alt=media&token=ffb54e7c-0177-4686-9e0e-b52d6710cf67"
   },
   {
     "turkish": "yemek",
     "english": "food",
     "difficulty": 1,
-    "image": "ic_food"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_food.png?alt=media&token=2571e8e0-aea9-40c7-aa92-3b660f083fb7"
   },
   {
     "turkish": "kapı",
     "english": "door",
     "difficulty": 1,
-    "image": "ic_door"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_door.png?alt=media&token=74657de1-c75c-4e3f-876e-c3da2b9a8abe"
   },
   {
     "turkish": "pencere",
     "english": "window",
     "difficulty": 1,
-    "image": "ic_window"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_window.png?alt=media&token=c1574be8-d0d1-4290-8d5d-852899c975cd"
   },
   {
     "turkish": "ağaç",
     "english": "tree",
     "difficulty": 1,
-    "image": "ic_tree"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_tree.png?alt=media&token=c61ec4c7-9b5a-4db1-8f18-fd5b71c270c1"
   },
   {
     "turkish": "otobüs",
     "english": "bus",
     "difficulty": 1,
-    "image": "ic_bus"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bus.png?alt=media&token=879344dd-2f64-49c5-a867-d73b6c38af89"
   },
   {
     "turkish": "deniz",
     "english": "sea",
     "difficulty": 1,
-    "image": "ic_sea"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sea.png?alt=media&token=ecd4a8db-8333-4968-88fd-c5e842a0b88d"
   },
   {
     "turkish": "park",
     "english": "park",
     "difficulty": 1,
-    "image": "ic_park"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_park.png?alt=media&token=05dff5e3-1723-472b-ac8b-a57976768292"
   },
   {
     "turkish": "dağ",
     "english": "mountain",
     "difficulty": 1,
-    "image": "ic_mountain"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_mountain.png?alt=media&token=8a3e540c-4a7e-447a-a480-8649ba22b079"
   },
   {
     "turkish": "toplantı",
     "english": "meeting",
     "difficulty": 2,
-    "image": "ic_meet"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_meet.png?alt=media&token=f8a61068-b221-46b5-bd99-731d52dbd2f7"
   },
   {
     "turkish": "öğrenci",
     "english": "student",
     "difficulty": 2,
-    "image": "ic_student"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_student.png?alt=media&token=8374818c-5e49-4204-9284-2f6943a8eee8"
   },
   {
     "turkish": "üniversite",
     "english": "university",
     "difficulty": 2,
-    "image": "ic_university"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_university.png?alt=media&token=9c8652c0-7484-47ec-878d-1e24e6684242"
   },
   {
     "turkish": "yabancı",
     "english": "foreigner",
     "difficulty": 2,
-    "image": "ic_foreigner"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_foreigner.png?alt=media&token=70f6c9cc-c62d-405d-928a-2b618158d3da"
   },
   {
     "turkish": "başarı",
     "english": "success",
     "difficulty": 2,
-    "image": "ic_success"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_success.png?alt=media&token=6d514a77-aefe-469f-89b1-7c5978bd0a6b"
   },
   {
     "turkish": "geliştirmek",
     "english": "improve",
     "difficulty": 2,
-    "image": "ic_improve"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_improve.png?alt=media&token=7380c3d7-da62-4423-a504-e3aa2e1ae050"
   },
   {
     "turkish": "teknoloji",
     "english": "technology",
     "difficulty": 2,
-    "image": "ic_technology"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_technology.png?alt=media&token=f49d7b64-e2a8-421a-bdd1-9152f45120d5"
   },
   {
     "turkish": "müzik",
     "english": "music",
     "difficulty": 2,
-    "image": "ic_music"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_music.png?alt=media&token=c90882b9-cc79-4e7f-889a-8ae7b4949706"
   },
   {
     "turkish": "sohbet",
     "english": "conversation",
     "difficulty": 2,
-    "image": "ic_conversation"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_conversation.png?alt=media&token=44d27cd9-55d6-4823-b1db-cca8d243ddb7"
   },
   {
     "turkish": "doğa",
     "english": "nature",
     "difficulty": 2,
-    "image": "ic_nature"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_nature.png?alt=media&token=accfd961-3fff-40fd-8129-d039dc09775f"
   },
   {
     "turkish": "keşfetmek",
     "english": "explore",
     "difficulty": 2,
-    "image": "ic_explore"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_explore.png?alt=media&token=d2f443f5-649f-46e5-8dd1-56da65d3aa38"
   },
   {
     "turkish": "kültür",
     "english": "culture",
     "difficulty": 2,
-    "image": "ic_culture"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_culture.png?alt=media&token=83bac0c9-6bb0-42fb-b5de-26f52d59c429"
   },
   {
     "turkish": "tecrübe",
     "english": "experience",
     "difficulty": 2,
-    "image": "ic_experience"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_experience.png?alt=media&token=1948d286-0f84-4bac-a5bf-cc467073c23c"
   },
   {
     "turkish": "felsefe",
     "english": "philosophy",
     "difficulty": 2,
-    "image": "ic_philosophy"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_philosophy.png?alt=media&token=0ac65419-3737-491b-93c5-fc03fd7f2f5f"
   },
   {
     "turkish": "tatil",
     "english": "vacation",
     "difficulty": 2,
-    "image": "ic_vacation"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_vacation.png?alt=media&token=9e7637f8-04eb-491f-9747-0fded9016993"
   },
   {
     "turkish": "ekonomi",
     "english": "economy",
     "difficulty": 2,
-    "image": "ic_economic"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_economic.png?alt=media&token=814d054a-5dd9-41f5-b249-aaf6ebdc98a3"
   },
   {
     "turkish": "karmaşıklık",
     "english": "complexity",
     "difficulty": 3,
-    "image": "ic_complexity"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_complexity.png?alt=media&token=0799ed67-9d54-4a2c-9880-bf180c7012a1"
   },
   {
     "turkish": "strateji",
     "english": "strategy",
     "difficulty": 3,
-    "image": "ic_strategy"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_strategy.png?alt=media&token=2ae9e9bd-8a06-4b43-867b-329c3141ad48"
   },
   {
     "turkish": "analiz",
     "english": "analysis",
     "difficulty": 3,
-    "image": "ic_analysis"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_analysis.png?alt=media&token=2ad81fe0-9663-475d-95f3-6c7bd0b43ea8"
   },
   {
     "turkish": "planlama",
     "english": "planning",
     "difficulty": 3,
-    "image": "ic_planning"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_planning.png?alt=media&token=57bb2716-c74b-4ed7-b4d6-9f077cff4a0b"
   }
 ]

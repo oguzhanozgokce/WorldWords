@@ -1,63 +1,24 @@
 package com.oguzhanozgokce.worldwords.data
 
-import com.oguzhanozgokce.worldwords.R
+import android.content.Context
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.oguzhanozgokce.worldwords.model.Word
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class WordRepository @Inject constructor(private val sharedPreferencesDataSource: SharedPreferencesDataSource) {
+class WordRepository @Inject constructor(private val sharedPreferencesDataSource: SharedPreferencesDataSource, @ApplicationContext private val context: Context) {
 
-    private val wordList = mutableListOf(
-        Word("elma", "apple", 1, R.drawable.ic_apple),
-        Word("kitap", "book", 1, R.drawable.ic_book),
-        Word("araba", "car", 1, R.drawable.ic_car),
-        Word("masa", "table", 1, R.drawable.ic_table),
-        Word("kalem", "pen", 1, R.drawable.ic_pen),
-        Word("bilgisayar", "computer", 1, R.drawable.ic_computer),
-        Word("kedi", "cat", 1, R.drawable.ic_cat),
-        Word("köpek", "dog", 1, R.drawable.ic_dog),
-        Word("su", "water", 1, R.drawable.ic_water),
-        Word("ekmek", "bread", 1, R.drawable.ic_bread),
-        Word("çiçek", "flower", 1, R.drawable.ic_flower),
-        Word("gözlük", "glasses", 1, R.drawable.ic_glasses),
-        Word("telefon", "phone", 1, R.drawable.ic_phone),
-        Word("bina", "building", 1, R.drawable.ic_building),
-        Word("uçak", "plane", 1, R.drawable.ic_plane),
-        Word("bisiklet", "bicycle", 1, R.drawable.ic_bicycle),
-        Word("el", "hand", 1, R.drawable.ic_hand),
-        Word("güneş", "sun", 1, R.drawable.ic_sun),
-        Word("çanta", "bag", 1, R.drawable.ic_bag),
-        Word("yatak", "bed", 1, R.drawable.ic_bed),
-        Word("ayakkabı", "shoe", 1, R.drawable.ic_shoe),
-        Word("sandalye", "chair", 1, R.drawable.ic_chair),
-        Word("yemek", "food", 1, R.drawable.ic_food),
-        Word("kapı", "door", 1, R.drawable.ic_door),
-        Word("pencere", "window", 1, R.drawable.ic_window),
-        Word("ağaç", "tree", 1, R.drawable.ic_tree),
-        Word("otobüs", "bus", 1, R.drawable.ic_bus),
-        Word("deniz", "sea", 1, R.drawable.ic_sea),
-        Word("park", "park", 1, R.drawable.ic_park),
-        Word("dağ", "mountain", 1, R.drawable.ic_mountain),
-        Word("toplantı", "meeting", 2, R.drawable.ic_meet),
-        Word("öğrenci", "student", 2, R.drawable.ic_student),
-        Word("üniversite", "university", 2, R.drawable.ic_university),
-        Word("yabancı", "foreigner", 2, R.drawable.ic_foreigner),
-        Word("başarı", "success", 2, R.drawable.ic_success),
-        Word("geliştirmek", "improve", 2, R.drawable.ic_improve),
-        Word("teknoloji", "technology", 2, R.drawable.ic_technology),
-        Word("müzik", "music", 2, R.drawable.ic_music),
-        Word("sohbet", "conversation", 2, R.drawable.ic_conversation),
-        Word("doğa", "nature", 2, R.drawable.ic_nature),
-        Word("keşfetmek", "explore", 2, R.drawable.ic_explore),
-        Word("kültür", "culture", 2, R.drawable.ic_culture),
-        Word("tecrübe", "experience", 2, R.drawable.ic_experience),
-        Word("felsefe", "philosophy", 2, R.drawable.ic_philosophy),
-        Word("tatil", "vacation", 2, R.drawable.ic_vacation),
-        Word("ekonomi", "economy", 2, R.drawable.ic_economic),
-        Word("karmaşıklık", "complexity", 3, R.drawable.ic_complexity),
-        Word("strateji", "strategy", 3, R.drawable.ic_strategy),
-        Word("analiz", "analysis", 3, R.drawable.ic_analysis),
-        Word("planlama", "planning", 3, R.drawable.ic_planning)
-    )
+    fun saveJsonDataToSharedPrefsIfFirstTime() {
+        val isFirstRun = sharedPreferencesDataSource.isFirstRun()
+        if (isFirstRun){
+            val json = context.assets.open("word.json").bufferedReader().use { it.readText() }
+            val type = object : TypeToken<List<Word>>() {}.type
+            val wordList : List<Word> = Gson().fromJson(json, type)
+            sharedPreferencesDataSource.saveWordsToSharedPreferences(wordList)
+            sharedPreferencesDataSource.setFirstRunCompleted()
+        }
+    }
 
     private val usageExampleMap = mapOf(
         "apple" to listOf(
@@ -312,28 +273,288 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         )
     )
 
+    private val usageExampleTurkishMap = mapOf(
+        "apple" to listOf(
+            "Her gün bir elma yiyorum.",
+            "Mağazadan kırmızı bir elma aldı.",
+            "Fırtına sırasında elma ağaçtan düştü."
+        ),
+        "book" to listOf(
+            "Dün gece bir kitap okudum.",
+            "Bu kitap dünya tarihi hakkında.",
+            "Çevre sorunları hakkında bir kitap yazıyor."
+        ),
+        "car" to listOf(
+            "Mavi bir arabam var.",
+            "Araba kırmızı ışıkta durdu.",
+            "Yeni elektrikli araba tek şarjla 300 milin üzerinde yol alabiliyor."
+        ),
+        "table" to listOf(
+            "Masa ahşaptan yapılmıştır.",
+            "Tabakları masaya koydu.",
+            "Konferans masasında planı tartıştılar."
+        ),
+        "pen" to listOf(
+            "Kağıdı imzalamak için bir kaleme ihtiyacım var.",
+            "Kalemin mürekkebi bitti.",
+            "En sevdiği dolma kalemle bir mektup yazdı."
+        ),
+        "computer" to listOf(
+            "Yeni bir bilgisayar aldı.",
+            "Bilgisayar çok hızlı.",
+            "Bilgisayarında karmaşık bir yazılım projesi üzerinde çalışıyor."
+        ),
+        "cat" to listOf(
+            "Kedi kanepede uyuyor.",
+            "Kedim iplikle oynamayı çok seviyor.",
+            "Siyah kedi hızlıca yüksek ağaca tırmandı."
+        ),
+        "dog" to listOf(
+            "Küçük bir köpeğim var.",
+            "Köpek yabancıya havladı.",
+            "Köpek yeni numarayı hızla öğrendi."
+        ),
+        "water" to listOf(
+            "Lütfen biraz su iç.",
+            "Göldeki su çok berrak.",
+            "Sürahiden bir bardak su döktü."
+        ),
+        "bread" to listOf(
+            "Taze ekmek yemeyi seviyorum.",
+            "Fırın lezzetli ekmekler satıyor.",
+            "Sıcak ekmek diliminin üzerine tereyağı sürdü."
+        ),
+        "flower" to listOf(
+            "Çiçek kırmızı.",
+            "Bahçeden güzel bir çiçek kopardı.",
+            "Tarladaki çiçekler ilkbaharda açar."
+        ),
+        "glasses" to listOf(
+            "Gözlük takıyor.",
+            "Okumak için gözlüğe ihtiyacım var.",
+            "Yeni gözlüklerinde mavi ışık filtresi var."
+        ),
+        "phone" to listOf(
+            "Arkadaşımı aramak için telefonumu kullanıyorum.",
+            "Telefon toplantı sırasında çaldı.",
+            "Mesajlaşma uygulaması aracılığıyla bir mesaj gönderdi."
+        ),
+        "building" to listOf(
+            "Bu yüksek bir bina.",
+            "Ofis şehir merkezindeki en yüksek binada yer alıyor.",
+            "Bina çevre dostu malzemelerle inşa edildi."
+        ),
+        "plane" to listOf(
+            "Uçak iniş yapıyor.",
+            "Uçağa erken bindiler.",
+            "Uçak dağların üzerinden ve bulutların arasından geçti."
+        ),
+        "bicycle" to listOf(
+            "Her gün bisiklet sürerim.",
+            "İşe gitmek için yeni bir bisiklet aldı.",
+            "Bisikletinde dağ bisikleti için vitesler var."
+        ),
+        "hand" to listOf(
+            "Elim üşüyor.",
+            "Soru sormak için elini kaldırdı.",
+            "Düştükten sonra ona elini uzattı."
+        ),
+        "sun" to listOf(
+            "Güneş parlıyor.",
+            "Güneş batıda batar.",
+            "Güneş ışınları bitkilerin büyümesi için enerji sağlar."
+        ),
+        "bag" to listOf(
+            "Okula bir çanta taşıyorum.",
+            "Öğle yemeğini küçük bir çantaya koydu.",
+            "Çanta kitaplar ve malzemelerle ağırdı."
+        ),
+        "bed" to listOf(
+            "Yatağımda uyurum.",
+            "Yatak çok rahat.",
+            "Temiz çarşaflar ve sıcak bir battaniye ile yatağı yaptı."
+        ),
+        "shoe" to listOf(
+            "Okula giderken ayakkabılarımı giyerim.",
+            "Yeni ayakkabıları çok rahat.",
+            "Koşu ayakkabılarının bağcıklarını yarış öncesi sıkıca bağladı."
+        ),
+        "chair" to listOf(
+            "Bir sandalyeye oturuyorum.",
+            "Oturma odasındaki sandalye çok yumuşak.",
+            "Daha iyi sırt desteği için yeni bir ofis sandalyesi aldı."
+        ),
+        "food" to listOf(
+            "İtalyan yemeklerini yemeyi seviyorum.",
+            "Yemek çok lezzetli ve tazeydi.",
+            "Her hafta yerel barınağa yemek bağışladılar."
+        ),
+        "door" to listOf(
+            "Kapıyı kapat, lütfen.",
+            "Kapı kırmızıya boyandı.",
+            "Ön kapı yavaşça açılırken gıcırdadı."
+        ),
+        "window" to listOf(
+            "Temiz hava almak için pencereyi aç.",
+            "Yağmuru görmek için pencereye baktı.",
+            "Top vurduğunda pencere kırıldı."
+        ),
+        "tree" to listOf(
+            "Ağaç çok uzun.",
+            "Arka bahçemdeki ağaç elma veriyor.",
+            "Sonbaharda, ağacın yaprakları parlak turuncuya döner."
+        ),
+        "bus" to listOf(
+            "Okula otobüsle giderim.",
+            "Otobüs bu sabah geç kaldı.",
+            "Otobüsü kaçırdı ve eve yürümek zorunda kaldı."
+        ),
+        "sea" to listOf(
+            "Deniz bugün sakin.",
+            "Yakındaki bir adaya deniz üzerinden yelken açtık.",
+            "Deniz birçok farklı deniz canlısına ev sahipliği yapar."
+        ),
+        "park" to listOf(
+            "Oynamak için parka gittik.",
+            "Park hafta sonları insanlarla dolu.",
+            "Gün batımında parkta uzun bir yürüyüş yaptılar."
+        ),
+        "mountain" to listOf(
+            "Dağ karla kaplı.",
+            "Dağ yolunda yürüyüş yaptık.",
+            "Dağın zirvesinden manzara nefes kesiciydi."
+        ),
+        "meeting" to listOf(
+            "Toplantı sabah 10'da başlıyor.",
+            "Yeni proje hakkında uzun bir toplantı yaptık.",
+            "Toplantı, ayrıntılı bir eylem planı ile sonuçlandı."
+        ),
+        "student" to listOf(
+            "Ben üniversitede öğrenciyim.",
+            "Öğrenci ders sırasında bir soru sordu.",
+            "Sınıfın en iyi öğrencisi, her zaman sınavlarda başarılı oluyor."
+        ),
+        "university" to listOf(
+            "Şehirdeki üniversitede okuyorum.",
+            "Üniversite birçok farklı kurs sunuyor.",
+            "Ülkenin en iyi üniversitelerinden birinden mezun oldu."
+        ),
+        "foreigner" to listOf(
+            "Bu ülkede bir yabancı.",
+            "Yabancı, en yakın otele nasıl gideceğini sordu.",
+            "Bir yabancı olarak, yeni kültüre alışması biraz zaman aldı."
+        ),
+        "success" to listOf(
+            "Başarı, sıkı çalışma gerektirir.",
+            "Kariyerinde büyük başarı elde etti.",
+            "Başarısı, yılların adanmışlık ve sabrının bir sonucudur."
+        ),
+        "improve" to listOf(
+            "İngilizcemi geliştirmek istiyorum.",
+            "İşyerinde performansını artırmak için çok çalıştı.",
+            "Yeni sistem, verimliliği artırmak ve maliyetleri düşürmek için tasarlandı."
+        ),
+        "technology" to listOf(
+            "Teknoloji hızla ilerliyor.",
+            "Yeni teknoloji sektörde devrim yarattı.",
+            "Sağlık sistemlerini iyileştirmek için teknolojinin nasıl kullanılacağını araştırıyor."
+        ),
+        "music" to listOf(
+            "Müzik dinlemeyi seviyorum.",
+            "Her akşam gitarıyla müzik çalıyor.",
+            "Müzik endüstrisi, yayın hizmetlerinin yükselişiyle birlikte büyük ölçüde değişti."
+        ),
+        "conversation" to listOf(
+            "Kısa bir sohbet yaptık.",
+            "Sohbetleri saatler sürdü.",
+            "Sohbet, politikadan felsefeye kadar geniş bir yelpazeyi kapsıyordu."
+        ),
+        "nature" to listOf(
+            "Doğa çok güzel.",
+            "Milli parkta doğayı keşfederek bir gün geçirdik.",
+            "Doğanın güzelliği yaratıcılığı teşvik edebilir ve zihni sakinleştirebilir."
+        ),
+        "explore" to listOf(
+            "Yeni yerler keşfetmeyi seviyorum.",
+            "Ormanın bilinmeyen bölgelerini keşfetmek için yola çıktılar.",
+            "Okyanusun derinliklerini keşfederek yeni türler aradı."
+        ),
+        "culture" to listOf(
+            "Her ülkenin kendi kültürü vardır.",
+            "Japonya'yı ziyaretimiz sırasında Japon kültürü hakkında çok şey öğrendik.",
+            "Festival, yerel topluluğun zengin ve çeşitli kültürünü kutluyor."
+        ),
+        "experience" to listOf(
+            "Etkinlikte harika bir deneyim yaşadım.",
+            "Gezi unutulmaz bir deneyimdi.",
+            "Sahadaki yıllara dayanan deneyimi, onu bu iş için ideal aday yaptı."
+        ),
+        "philosophy" to listOf(
+            "Üniversitede felsefe okuyor.",
+            "Felsefe, hayat ve varoluşla ilgili temel soruları araştırır.",
+            "Kitabı, antik Yunan felsefesine yeni bir bakış açısı sunuyor."
+        ),
+        "vacation" to listOf(
+            "Geçen yaz tatil yaptık.",
+            "Aile İtalya'da iki haftalık bir tatil planladı.",
+            "Tatilini tropikal adanın gizli plajlarını keşfederek geçirdiler."
+        ),
+        "economy" to listOf(
+            "Ekonomi büyüyor.",
+            "Uzmanlar, enflasyonun küresel ekonomi üzerindeki etkilerini analiz ediyor.",
+            "Ülkenin ekonomisi büyük ölçüde ihracat ve uluslararası ticarete dayanıyor."
+        ),
+        "complexity" to listOf(
+            "Sorunun karmaşıklığı çözülmesini zorlaştırıyor.",
+            "Konunun karmaşıklığı dikkatli düşünmeyi gerektiriyor.",
+            "Araştırması, insan davranışı ve karar verme sürecinin karmaşıklığına odaklanıyor."
+        ),
+        "strategy" to listOf(
+            "Yeni bir stratejiye ihtiyacımız var.",
+            "Şirketin stratejisi uzun vadeli büyümeye odaklanıyor.",
+            "Etkili bir strateji geliştirmek, piyasayı derinlemesine anlamayı gerektirir."
+        ),
+        "analysis" to listOf(
+            "Verilerin analizini yaptık.",
+            "Rapor, mali tabloların derinlemesine bir analizini içeriyor.",
+            "Durumun analizi, projeye değerli bilgiler sağladı."
+        ),
+        "planning" to listOf(
+            "Planlama, başarı için önemlidir.",
+            "Etkinliği planlamaktan sorumlu.",
+            "Etkili planlama, kaynakların verimli bir şekilde tahsis edilmesini sağlar."
+        )
+    )
+
+
     fun getWords(): List<Word> {
-        return wordList
+        return sharedPreferencesDataSource.getWordsFromSharedPreferences()
     }
 
     fun addWord(word: Word) {
-        wordList.add(word)
+        sharedPreferencesDataSource.addWordToSharedPreferences(word)
     }
 
     fun removeWord(word: Word) {
-        wordList.remove(word)
+        sharedPreferencesDataSource.removeWordFromSharedPreferences(word)
     }
 
-    fun filterWords(difficulty: Int): List<Word> {
-        return wordList.filter { it.difficulty == difficulty }
+    fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String) {
+        val newWord = Word(turkish, english, difficulty, imageUrl)
+        sharedPreferencesDataSource.addWordToSharedPreferences(newWord)
     }
+
 
     fun shuffleWords(): List<Word> {
-        return wordList.shuffled()
+        return sharedPreferencesDataSource.shuffleWordsAndSave()
     }
 
     fun getUsageExamples(word: Word): List<String>? {
         return usageExampleMap[word.english]
+    }
+
+    fun getUsageTurkishExamples(word: Word): List<String>? {
+        return usageExampleTurkishMap[word.english]
     }
 
     fun addWordToLearnedList(word: Word) {

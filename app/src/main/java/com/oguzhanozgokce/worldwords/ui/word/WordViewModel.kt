@@ -17,25 +17,11 @@ class WordViewModel @Inject constructor(private val wordRepository: WordReposito
         loadWords()
     }
 
-    private fun loadWords() {
+     fun loadWords() {
         _wordList.value = wordRepository.getWords()
-    }
-
-    fun filterWords(difficulty: Int) {
-        _wordList.value = wordRepository.filterWords(difficulty)
     }
 
     fun shuffleWords() {
         _wordList.value = wordRepository.shuffleWords()
-    }
-
-    fun addWord(word: Word) {
-        wordRepository.addWord(word)
-        _wordList.value = wordRepository.getWords()
-    }
-
-    fun removeWord(word: Word) {
-        wordRepository.removeWord(word)
-        _wordList.value = wordRepository.getWords()
     }
 }
