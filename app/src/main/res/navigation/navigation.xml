@@ -47,10 +47,15 @@
         android:id="@+id/customWordFragment"
         android:name="com.oguzhanozgokce.worldwords.ui.customword.CustomWordFragment"
         android:label="fragment_custom_word"
-        tools:layout="@layout/fragment_custom_word" />
+        tools:layout="@layout/fragment_custom_word" >
+        <action
+            android:id="@+id/action_customWordFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/wordGameFragment"
         android:name="com.oguzhanozgokce.worldwords.ui.game.WordGameFragment"
         android:label="fragment_word_game"
         tools:layout="@layout/fragment_word_game" />
+
 </navigation>

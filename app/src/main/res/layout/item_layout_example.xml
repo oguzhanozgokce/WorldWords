@@ -36,6 +36,7 @@
             app:tint="@color/blue"
             android:clickable="true"
             android:focusable="true"
+            android:visibility="visible"
             android:background="?attr/selectableItemBackgroundBorderless" />
 
     </RelativeLayout>

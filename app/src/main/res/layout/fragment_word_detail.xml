@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:backgroundTint="@color/background"
     tools:context=".ui.detail.WordDetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="16dp">
 
         <ImageView
@@ -17,6 +18,7 @@
             android:layout_height="48dp"
             android:contentDescription="Back"
             android:padding="8dp"
+            android:tint="@color/text_color"
             android:src="@drawable/baseline_arrow_back_24"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,6 +44,7 @@
             android:layout_height="48dp"
             android:src="@drawable/ic_bookmark_add_24"
             android:padding ="8dp"
+            android:tint="@color/text_color"
             android:contentDescription="Bookmark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,7 +72,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Turkish Word -->
         <TextView
             android:id="@+id/tw_selected_turkish_word"
             android:layout_width="wrap_content"
@@ -84,7 +86,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cv_selected_word" />
 
-        <!-- Separator -->
         <View
             android:id="@+id/view_separator"
             android:layout_width="match_parent"
@@ -108,7 +109,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/view_separator" />
 
-        <!-- RecyclerView for Examples -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rw_usageExample"
             android:layout_width="match_parent"
@@ -119,63 +119,39 @@
             app:layout_constraintTop_toBottomOf="@id/tw_usage_examples_title" />
 
         <TextView
-            android:id="@+id/rw_other_languages"
+            android:id="@+id/tw_other_languages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Uses in Other Languages"
+            android:text="Meanings of sentences"
             android:textColor="@color/text_color"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rw_usageExample" />
 
-        <LinearLayout
-            android:id="@+id/ll_language_translations"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rw_meaning"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            android:padding="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/rw_other_languages">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tw_other_languages"/>
 
-            <TextView
-                android:id="@+id/tw_spanish_translation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Spanish: Manzana"
-                android:textColor="@color/text_color"
-                android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/tw_german_translation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="German: Apfel"
-                android:textColor="@color/text_color"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tw_french_translation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="French: Pomme"
-                android:textColor="@color/text_color"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_learned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:src="@drawable/baseline_add_24"
-            app:backgroundTint="@color/red"
+            android:background="@drawable/button_background"
+            android:text="Learned"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rw_meaning"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
