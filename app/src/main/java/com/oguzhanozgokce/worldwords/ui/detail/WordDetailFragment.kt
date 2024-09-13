@@ -85,21 +85,14 @@ class WordDetailFragment : Fragment() {
         examplesAdapter = ExamplesUseAdapter(emptyList()) { example ->
             speakWord(example)
         }
-
-        binding.rwUsageExample.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = examplesAdapter
-        }
+        binding.rwUsageExample.adapter = examplesAdapter
     }
 
     private fun setupTurkishRecyclerView() {
         examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(emptyList()) { example ->
             Toast.makeText(requireContext(), "Tıklanan örnek: $example", Toast.LENGTH_SHORT).show()
         }
-        binding.rwMeaning.apply {
-            layoutManager = LinearLayoutManager(requireContext())
-            adapter = examplesTurkishUseAdapter
-        }
+        binding.rwMeaning.adapter = examplesTurkishUseAdapter
     }
 
 

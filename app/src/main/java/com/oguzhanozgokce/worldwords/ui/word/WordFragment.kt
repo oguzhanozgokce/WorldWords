@@ -60,11 +60,7 @@ class WordFragment : Fragment() {
             onItemClick = { word -> navigateToWordDetail(word) },
             onMicClick = { word -> speakEnglishWord(word) }
         )
-
-        binding.rwWord.apply {
-            layoutManager = GridLayoutManager(requireContext(), 3)
-            adapter = wordAdapter
-        }
+        binding.rwWord.adapter = wordAdapter
     }
 
     private fun navigateToWordDetail(word: Word) {

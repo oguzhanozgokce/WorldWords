@@ -56,6 +56,10 @@
             android:id="@+id/rw_word"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_layout_word"
+            tools:itemCount="10"
             android:paddingStart="16dp"
             android:paddingTop="16dp"
             android:paddingEnd="16dp"/>

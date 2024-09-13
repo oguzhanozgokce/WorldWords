@@ -41,11 +41,7 @@ class SaveFragment : Fragment() {
         saveAdapter = SaveAdapter(emptyList()) { word ->
             navigateToWordDetail(word)
         }
-
-        binding.rwSave.apply {
-            layoutManager = GridLayoutManager(requireContext(), 3)
-            adapter = saveAdapter
-        }
+        binding.rwSave.adapter = saveAdapter
     }
 
     private fun observeSavedWords() {

@@ -61,10 +61,7 @@ class LearnedWordFragment : Fragment() {
             onMicClick = { word -> speakEnglishWord(word) },
             onDeleteClick = { word -> showDeleteConfirmationDialog(word) },
         )
-        binding.rwLearnedWord.apply {
-            layoutManager = GridLayoutManager(requireContext(), 3)
-            adapter = learnedWordAdapter
-        }
+        binding.rwLearnedWord.adapter = learnedWordAdapter
     }
 
     private fun speakEnglishWord(word: Word) {
