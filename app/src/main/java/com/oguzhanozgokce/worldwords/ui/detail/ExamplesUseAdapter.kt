@@ -7,28 +7,29 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.oguzhanozgokce.worldwords.R
+import com.oguzhanozgokce.worldwords.databinding.ItemLayoutExampleBinding
+import com.oguzhanozgokce.worldwords.databinding.ItemLayoutLearnedWordBinding
+import kotlinx.coroutines.NonDisposableHandle.parent
 
 class ExamplesUseAdapter(
     private val examples: List<String>,
     private val onMicClick: (String) -> Unit
 ) : RecyclerView.Adapter<ExamplesUseAdapter.ExampleViewHolder>() {
 
-    inner class ExampleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val exampleTextView: TextView = itemView.findViewById(R.id.tv_usage_example)
-        private val micClick: ImageView = itemView.findViewById(R.id.iv_mic)
-
+    inner class ExampleViewHolder(private val binding: ItemLayoutExampleBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(example: String) {
-            exampleTextView.text = example
-            micClick.setOnClickListener {
-                onMicClick(example)
+            with(binding){
+                tvUsageExample.text = example
+                ivMic.setOnClickListener {
+                    onMicClick(example)
+                }
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExampleViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_layout_example, parent, false)
-        return ExampleViewHolder(view)
+        val binding = ItemLayoutExampleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ExampleViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {

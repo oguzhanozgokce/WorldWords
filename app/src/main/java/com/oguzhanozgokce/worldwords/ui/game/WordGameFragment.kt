@@ -24,7 +24,7 @@ class WordGameFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentWordGameBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -40,9 +40,6 @@ class WordGameFragment : Fragment() {
         wordGameAdapter = WordGameAdapter(emptyList()) { clickedWord ->
             Toast.makeText(requireContext(), "Clicked: ${clickedWord.english}", Toast.LENGTH_SHORT).show()
         }
-
-        val gridLayoutManager = GridLayoutManager(requireContext(), 2) // 2 sütunlu grid
-        binding.rwWordGame.layoutManager = gridLayoutManager
         binding.rwWordGame.adapter = wordGameAdapter
     }
 

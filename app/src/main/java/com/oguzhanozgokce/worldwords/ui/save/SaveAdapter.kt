@@ -3,6 +3,8 @@ package com.oguzhanozgokce.worldwords.ui.save
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 
@@ -14,11 +16,17 @@ class SaveAdapter(
     inner class SaveViewHolder(private val binding: ItemLayoutWordBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(word: Word) {
-            binding.tvTurkishWord.text = word.turkish
-            binding.tvEnglishWord.text = word.english
-            binding.wordImage.setImageResource(word.image)
-            binding.root.setOnClickListener {
-                onItemClick(word)
+            with(binding) {
+                tvTurkishWord.text = word.turkish
+                tvEnglishWord.text = word.english
+                Glide.with(wordImage)
+                    .load(word.image)
+                    .placeholder(R.drawable.ic_words)
+                    .error(R.drawable.ic_bag)
+                    .into(wordImage)
+                root.setOnClickListener {
+                    onItemClick(word)
+                }
             }
         }
     }

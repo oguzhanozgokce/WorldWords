@@ -59,7 +59,7 @@ class LearnedWordFragment : Fragment() {
         learnedWordAdapter = LearnedWordAdapter(
             emptyList(),
             onMicClick = { word -> speakEnglishWord(word) },
-            onDeleteClick = { word -> showDeleteConfirmationDialog(word) }
+            onDeleteClick = { word -> showDeleteConfirmationDialog(word) },
         )
         binding.rwLearnedWord.apply {
             layoutManager = GridLayoutManager(requireContext(), 3)

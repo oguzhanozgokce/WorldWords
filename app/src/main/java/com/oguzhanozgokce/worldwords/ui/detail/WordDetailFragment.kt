@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordDetailBinding
 import com.oguzhanozgokce.worldwords.model.Word
@@ -27,6 +28,7 @@ class WordDetailFragment : Fragment() {
     private val binding get() = _binding!!
     private val wordDetailViewModel: WordDetailViewModel by viewModels()
     private lateinit var examplesAdapter: ExamplesUseAdapter
+    private lateinit var examplesTurkishUseAdapter: ExamplesTurkishUseAdapter
     private val args: WordDetailFragmentArgs by navArgs()
     private lateinit var textToSpeech: TextToSpeech
 
@@ -44,6 +46,7 @@ class WordDetailFragment : Fragment() {
         val selectedWord = args.word
         setupWordDetails(selectedWord)
         setupRecyclerView()
+        setupTurkishRecyclerView()
         observeUsageExamples(selectedWord)
         addWordToLearnedList(selectedWord)
         toggleSaveButton(selectedWord)
@@ -64,7 +67,11 @@ class WordDetailFragment : Fragment() {
         with(binding) {
             twSelectedTurkishWord.text = word.turkish.replaceFirstChar { it.uppercase() }
             twSelectedWord.text = word.english.replaceFirstChar { it.uppercase() }
-            ivSelectedWord.setImageResource(word.image)
+            Glide.with(ivSelectedWord.context)
+                .load(word.image)
+                .placeholder(R.drawable.ic_words)
+                .error(R.drawable.ic_bag)
+                .into(ivSelectedWord)
             binding.iwBack.setOnClickListener {
                 findNavController().navigateUp()
             }
@@ -85,6 +92,17 @@ class WordDetailFragment : Fragment() {
         }
     }
 
+    private fun setupTurkishRecyclerView() {
+        examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(emptyList()) { example ->
+            Toast.makeText(requireContext(), "Tıklanan örnek: $example", Toast.LENGTH_SHORT).show()
+        }
+        binding.rwMeaning.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter = examplesTurkishUseAdapter
+        }
+    }
+
+
     private fun speakWord(word: String) {
         textToSpeech.speak(word, TextToSpeech.QUEUE_FLUSH, null, null)
     }
@@ -99,10 +117,16 @@ class WordDetailFragment : Fragment() {
                 binding.rwUsageExample.adapter = examplesAdapter
             }
         }
+        lifecycleScope.launch {
+            wordDetailViewModel.usageTurkishExamples.collect { turkishExamples ->
+                examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(turkishExamples) { }
+                binding.rwMeaning.adapter = examplesTurkishUseAdapter
+            }
+        }
     }
 
     private fun addWordToLearnedList(word: Word) {
-        binding.fab.setOnClickListener {
+        binding.buttonLearned.setOnClickListener {
             if (wordDetailViewModel.isWordInLearnedList(word)) {
                 showWordAlreadyExistsDialog(word)
             } else {
@@ -150,7 +174,6 @@ class WordDetailFragment : Fragment() {
             binding.iwSaveWord.setImageResource(R.drawable.ic_bookmark_add_24)
         }
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

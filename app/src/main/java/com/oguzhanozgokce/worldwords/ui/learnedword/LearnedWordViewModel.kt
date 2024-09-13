@@ -14,13 +14,18 @@ class LearnedWordViewModel @Inject constructor(private val wordRepository: WordR
     private val _learnedWords = MutableStateFlow<List<Word>>(emptyList())
     val learnedWords: StateFlow<List<Word>> get() = _learnedWords
 
+    private val _wordList =  MutableStateFlow<List<Word>>(emptyList())
+    val wordList: StateFlow<List<Word>> get() = _learnedWords
+
 
     fun getLearnedWords() {
         _learnedWords.value = wordRepository.getLearnedWords()
     }
 
-     fun deleteWord(word: Word) {
-       wordRepository.removeWordFromLearnedList(word)
+    fun deleteWord(word: Word) {
+        wordRepository.removeWordFromLearnedList(word)
         _learnedWords.value = wordRepository.getLearnedWords()
+        wordRepository.addWord(word)
+        _wordList.value = wordRepository.getWords()
     }
 }
