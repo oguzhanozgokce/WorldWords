@@ -66,7 +66,8 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
     }
 
     private fun FragmentLearnedWordBinding.showEmptyLearnedScreen() {
-        emptyLayout.visible()
+        iwEmpty.visible()
+        emptyActionButton.visible()
         rwLearnedWord.gone()
         emptyActionButton.setOnClickListener {
             navigateToWord()
@@ -74,8 +75,9 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
     }
 
     private fun FragmentLearnedWordBinding.hideEmptyLearnedScreen() {
-        emptyLayout.gone()
         rwLearnedWord.visible()
+        iwEmpty.gone()
+        emptyActionButton.gone()
     }
 
     private fun FragmentLearnedWordBinding.isView() {

@@ -46,7 +46,8 @@ class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::infl
     }
 
     private fun FragmentSaveBinding.showEmptyLearnedScreen() {
-        emptyLayout.visible()
+        iwEmpty.visible()
+        emptyActionButton.visible()
         rwSave.gone()
         emptyActionButton.setOnClickListener {
             navigateToWord()
@@ -54,8 +55,9 @@ class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::infl
     }
 
     private fun FragmentSaveBinding.hideEmptyLearnedScreen() {
-        emptyLayout.gone()
         rwSave.visible()
+        iwEmpty.gone()
+        emptyActionButton.gone()
     }
 
     private fun FragmentSaveBinding.isView() {
