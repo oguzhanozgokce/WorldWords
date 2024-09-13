@@ -3,7 +3,6 @@ package com.oguzhanozgokce.worldwords.di
 import android.content.Context
 import com.oguzhanozgokce.worldwords.data.SharedPreferencesDataSource
 import com.oguzhanozgokce.worldwords.data.WordRepository
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -526,7 +526,6 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         )
     )
 
-
     fun getWords(): List<Word> {
         return sharedPreferencesDataSource.getWordsFromSharedPreferences()
     }
@@ -538,12 +537,6 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
     fun removeWord(word: Word) {
         sharedPreferencesDataSource.removeWordFromSharedPreferences(word)
     }
-
-    fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String) {
-        val newWord = Word(turkish, english, difficulty, imageUrl)
-        sharedPreferencesDataSource.addWordToSharedPreferences(newWord)
-    }
-
 
     fun shuffleWords(): List<Word> {
         return sharedPreferencesDataSource.shuffleWordsAndSave()
@@ -557,12 +550,12 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
         return usageExampleTurkishMap[word.english]
     }
 
-    fun addWordToLearnedList(word: Word) {
-        sharedPreferencesDataSource.addLearnedWord(word)
-    }
-
     fun getLearnedWords(): List<Word> {
         return sharedPreferencesDataSource.getLearnedWords()
+    }
+
+    fun addWordToLearnedList(word: Word) {
+        sharedPreferencesDataSource.addLearnedWord(word)
     }
 
     fun removeWordFromLearnedList(word: Word) {
@@ -587,5 +580,10 @@ class WordRepository @Inject constructor(private val sharedPreferencesDataSource
 
     fun isWordSaved(word: Word): Boolean {
         return sharedPreferencesDataSource.isWordInSavedList(word)
+    }
+
+    fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String) {
+        val newWord = Word(turkish, english, difficulty, imageUrl)
+        sharedPreferencesDataSource.addWordToSharedPreferences(newWord)
     }
 }

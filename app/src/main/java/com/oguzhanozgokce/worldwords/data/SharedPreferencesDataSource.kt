@@ -18,7 +18,6 @@ class SharedPreferencesDataSource @Inject constructor(
         private const val FIRST_RUN_KEY = "first_run_key"
     }
 
-
      fun saveWordsToSharedPreferences(words: List<Word>) {
         val editor = sharedPreferences.edit()
         val json = gson.toJson(words)
@@ -45,7 +44,6 @@ class SharedPreferencesDataSource @Inject constructor(
         editor.putBoolean(FIRST_RUN_KEY, false)
         editor.apply()
     }
-
 
     fun addWordToSharedPreferences(word: Word) {
         val currentWords = getWordsFromSharedPreferences().toMutableList()
