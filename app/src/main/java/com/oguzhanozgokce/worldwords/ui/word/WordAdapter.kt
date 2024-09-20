@@ -2,15 +2,16 @@ package com.oguzhanozgokce.worldwords.ui.word
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 
 class WordAdapter(
-    private var words: List<Word>,
     private val onItemClick: (Word) -> Unit,
-    private val onMicClick : (Word) -> Unit
-) : RecyclerView.Adapter<WordViewHolder>() {
+    private val onMicClick: (Word) -> Unit
+) : ListAdapter<Word, WordViewHolder>(WordDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
         val binding = ItemLayoutWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -18,16 +19,23 @@ class WordAdapter(
     }
 
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        holder.bind(words[position], onItemClick, onMicClick)
+        holder.bind(getItem(position), onItemClick, onMicClick)
     }
 
-    override fun getItemCount(): Int = words.size
+    class WordDiffCallback : DiffUtil.ItemCallback<Word>() {
+        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem.english == newItem.english
+        }
 
-    fun updateWords(newWords: List<Word>) {
-        words = newWords
-        notifyDataSetChanged()
+        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem == newItem
+        }
     }
 }
 
-//diffutil
+
+
+
+
+
 

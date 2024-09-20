@@ -2,16 +2,17 @@ package com.oguzhanozgokce.worldwords.ui.save
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.oguzhanozgokce.worldwords.common.loadImage
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
 
 class SaveAdapter(
-    private var words: List<Word>,
     private val onItemClick: (Word) -> Unit,
     private val onMickClick: (Word) -> Unit
-) : RecyclerView.Adapter<SaveAdapter.SaveViewHolder>() {
+) : ListAdapter<Word, SaveAdapter.SaveViewHolder>(SaveDiffCallback()) {
 
     inner class SaveViewHolder(private val binding: ItemLayoutWordBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -31,11 +32,6 @@ class SaveAdapter(
         }
     }
 
-    fun updateWords(newWords: List<Word>) {
-        words = newWords
-        notifyDataSetChanged()
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SaveViewHolder {
         val binding =
             ItemLayoutWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -43,10 +39,16 @@ class SaveAdapter(
     }
 
     override fun onBindViewHolder(holder: SaveViewHolder, position: Int) {
-        holder.bind(words[position])
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int {
-        return words.size
+    class SaveDiffCallback : DiffUtil.ItemCallback<Word>() {
+        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem.english == newItem.english
+        }
+
+        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
+            return oldItem == newItem
+        }
     }
 }

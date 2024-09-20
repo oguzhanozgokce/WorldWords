@@ -1,24 +1,19 @@
 package com.oguzhanozgokce.worldwords.ui.detail
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutExampleBinding
-import com.oguzhanozgokce.worldwords.databinding.ItemLayoutLearnedWordBinding
-import kotlinx.coroutines.NonDisposableHandle.parent
 
 class ExamplesUseAdapter(
-    private val examples: List<String>,
     private val onMicClick: (String) -> Unit
-) : RecyclerView.Adapter<ExamplesUseAdapter.ExampleViewHolder>() {
+) : ListAdapter<String, ExamplesUseAdapter.ExampleViewHolder>(ExampleDiffCallback()) {
 
     inner class ExampleViewHolder(private val binding: ItemLayoutExampleBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(example: String) {
-            with(binding){
+            with(binding) {
                 tvUsageExample.text = example
                 ivMic.setOnClickListener {
                     onMicClick(example)
@@ -33,10 +28,17 @@ class ExamplesUseAdapter(
     }
 
     override fun onBindViewHolder(holder: ExampleViewHolder, position: Int) {
-        holder.bind(examples[position])
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int {
-        return examples.size
+    class ExampleDiffCallback : DiffUtil.ItemCallback<String>() {
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
     }
 }
+
