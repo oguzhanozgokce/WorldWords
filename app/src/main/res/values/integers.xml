@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="grid_span_count">3</integer>
+    <integer name="game_span_count">2</integer>
+    <integer name="item_count">10</integer>
+    <integer name="max_line">1</integer>
+</resources>

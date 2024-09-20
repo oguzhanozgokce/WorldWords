@@ -1,61 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="8dp"
-    android:padding="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
-    android:layout_width="120dp"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/item_word_image_width"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:padding="@dimen/padding_small"
+    app:cardCornerRadius="@dimen/radius_small"
+    app:cardElevation="@dimen/elevation_extra_small">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/wordImage"
+            android:layout_width="@dimen/item_image_width"
+            android:layout_height="@dimen/item_image_height"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:contentDescription="@string/word_image"
+            android:padding="@dimen/padding_extra_small"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_words" />
+
+        <TextView
+            android:id="@+id/tvEnglishWord"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_line"
+            android:text="@string/english_word"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold"
+            tools:text="@string/english_word" />
 
-            <ImageView
-                android:id="@+id/wordImage"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="4dp"
-                android:padding="4dp"
-                android:layout_gravity="center"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_words" />
+        <TextView
+            android:id="@+id/tvTurkishWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:ellipsize="end"
+            android:maxLines="@integer/max_line"
+            android:text="@string/turkish_word"
+            android:textSize="@dimen/text_size_extra_medium"
+            tools:text="@string/turkish_word" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvEnglishWord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="English Word"
-                android:layout_marginTop="8dp"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:text="English Word" />
-
-            <TextView
-                android:id="@+id/tvTurkishWord"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Turkish Word"
-                android:textSize="14sp"
-                tools:text="Turkish Word" />
-        </LinearLayout>
-    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

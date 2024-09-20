@@ -9,43 +9,30 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rw_save"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
+        style="@style/BaseRecyclerViewStyle"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
-        tools:itemCount="10"
-        tools:listitem="@layout/item_layout_word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="@integer/grid_span_count"
+        tools:itemCount="@integer/item_count"
+        tools:listitem="@layout/item_layout_word" />
 
     <ImageView
         android:id="@+id/iw_empty"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/ic_empty"
-        android:visibility="gone"
+        style="@style/BaseImageViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/emptyActionButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start Save"
-            android:background="@color/bottom_nav"
-            android:textColor="@color/white"
-            android:padding="12dp"
-            android:visibility="gone"
-            android:textStyle="bold"
-            app:cornerRadius="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/iw_empty"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/emptyActionButton"
+        style="@style/BaseButtonStyle"
+        android:text="@string/start_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iw_empty" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

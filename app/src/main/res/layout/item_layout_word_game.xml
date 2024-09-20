@@ -5,11 +5,11 @@
     android:id="@+id/cardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/margin_small"
     android:background="@drawable/card_background_selector"
-    android:padding="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    android:padding="@dimen/padding_small"
+    app:cardCornerRadius="@dimen/radius_small"
+    app:cardElevation="@dimen/elevation_extra_small">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,12 +23,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:ellipsize="end"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:text="English Word"
-            android:textSize="18sp"
+            android:maxLines="@integer/max_line"
+            android:padding="@dimen/padding_small"
+            android:text="@string/english_word"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold"
-            tools:text="English Word" />
+            tools:text="@string/english_word" />
 
         <TextView
             android:id="@+id/tvTurkishWord"
@@ -36,12 +36,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:ellipsize="end"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:text="Turkish Word"
-            android:textSize="18sp"
+            android:maxLines="@integer/max_line"
+            android:padding="@dimen/padding_small"
+            android:text="@string/turkish_word"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold"
-            tools:text="Turkish Word" />
+            tools:text="@string/turkish_word" />
     </FrameLayout>
 
 </androidx.cardview.widget.CardView>

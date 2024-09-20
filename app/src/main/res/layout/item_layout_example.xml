@@ -2,15 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/margin_small"
     android:background="@color/white"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp">
+    app:cardCornerRadius="@dimen/radius_small"
+    app:cardElevation="@dimen/elevation_small">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:padding="@dimen/padding_extra_medium">
 
         <TextView
             android:id="@+id/tv_usage_example"
@@ -19,26 +19,25 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:fontFamily="sans-serif-medium"
-            android:lineSpacingExtra="4dp"
-            android:paddingEnd="40dp"
-            android:text="Example usage of a word."
+            android:lineSpacingExtra="@dimen/padding_extra_small"
+            android:paddingEnd="@dimen/padding_extra_large"
+            android:text="@string/example_usage_of_a_word"
             android:textColor="@color/text_color"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size_medium" />
 
         <ImageView
             android:id="@+id/iv_mic"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:contentDescription="Mic Icon"
-            android:src="@drawable/ic_mic"
-            app:tint="@color/blue"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:contentDescription="@string/mic_icon"
             android:focusable="true"
+            android:src="@drawable/ic_mic"
             android:visibility="visible"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+            app:tint="@color/blue" />
 
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
