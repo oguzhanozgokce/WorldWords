@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">WorldWords</string>
     <string name="word_image">word desc</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_word">Add word</string>
+    <string name="turkish_word">Turkish Word</string>
+    <string name="english_word">English Word</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="selected_image">Selected Image</string>
+    <string name="select_image">Select Image</string>
+    <string name="save">Save</string>
+    <string name="start_learning">Start Learning</string>
+    <string name="start_save">Start Save</string>
+    <string name="word">Word</string>
+    <string name="usage_examples">Usage Examples</string>
+    <string name="learned">Learned</string>
+    <string name="meanings_of_sentences">Meanings of sentences</string>
+    <string name="selected_word_image">Selected Word Image</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="back">Back</string>
+    <string name="add_word_icon">Add Word Icon</string>
+    <string name="empty_list">Empty List</string>
+    <string name="word_game">Word Game</string>
+    <string name="example_usage_of_a_word">Example usage of a word.</string>
+    <string name="mic_icon">Mic Icon</string>
+    <string name="remove_icon">Remove Icon</string>
 </resources>

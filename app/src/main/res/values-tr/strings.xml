@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kelime Dünyası</string>
+    <string name="word_image">Kelime açıklaması</string>
+    <string name="hello_blank_fragment">Merhaba boş fragment</string>
+    <string name="add_word">Kelime ekle</string>
+    <string name="turkish_word">Türkçe Kelime</string>
+    <string name="english_word">İngilizce Kelime</string>
+    <string name="upload_image">Resim Yükle</string>
+    <string name="selected_image">Seçilen Resim</string>
+    <string name="select_image">Resim Seç</string>
+    <string name="save">Kaydet</string>
+    <string name="start_learning">Öğrenmeye Başla</string>
+    <string name="start_save">Kaydetmeye Başla</string>
+    <string name="word">Kelime</string>
+    <string name="usage_examples">Kullanım Örnekleri</string>
+    <string name="learned">Öğrenildi</string>
+    <string name="meanings_of_sentences">Cümlelerin Anlamları</string>
+    <string name="selected_word_image">Seçilen Kelimenin Resmi</string>
+    <string name="bookmark">Yer İşareti</string>
+    <string name="back">Geri</string>
+    <string name="add_word_icon">Kelime Ekle İkonu</string>
+    <string name="empty_list">Boş Liste</string>
+    <string name="word_game">Kelime Oyunu</string>
+    <string name="example_usage_of_a_word">Bir kelimenin kullanım örneği.</string>
+    <string name="mic_icon">Mikrofon İkonu</string>
+    <string name="remove_icon">Sil İkonu</string>
+</resources>
