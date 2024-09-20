@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero_height">0dp</dimen>
+    <dimen name="view_height">1dp</dimen>
+
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_extra_medium">12dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_extra_large">40dp</dimen>
+
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_extra_medium">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_extra_large">24sp</dimen>
+
+    <dimen name="image_width">48dp</dimen>
+    <dimen name="image_height">48dp</dimen>
+
+    <dimen name="icon_width">36dp</dimen>
+    <dimen name="icon_height">36dp</dimen>
+
+    <dimen name="card_corner_radius">8dp</dimen>
+
+    <dimen name="radius_small">8dp</dimen>
+    <dimen name="radius_medium">16dp</dimen>
+    <dimen name="radius_large">24dp</dimen>
+
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+
+    <dimen name="selected_image_width">120dp</dimen>
+    <dimen name="selected_image_height">120dp</dimen>
+
+    <dimen name="item_word_image_width">120dp</dimen>
+    <dimen name="item_image_width">70dp</dimen>
+    <dimen name="item_image_height">70dp</dimen>
+
+    <dimen name="word_image_width">150dp</dimen>
+    <dimen name="word_image_height">150dp</dimen>
+
+    <dimen name="item_icon_width">24dp</dimen>
+    <dimen name="item_icon_height">24dp</dimen>
+
+    <dimen name="elevation_extra_small">4dp</dimen>
+    <dimen name="elevation_small">8dp</dimen>
+    <dimen name="elevation_medium">16dp</dimen>
+    <dimen name="elevation_large">24dp</dimen>
+
+    <dimen name="empty_image_height">300dp</dimen>
+
+</resources>
