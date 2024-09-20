@@ -13,15 +13,25 @@ class WordViewModel @Inject constructor(private val wordRepository: WordReposito
     private val _wordList = MutableStateFlow<List<Word>>(emptyList())
     val wordList: StateFlow<List<Word>> get() = _wordList
 
+    private val _filteredWords = MutableStateFlow<List<Word>>(emptyList())
+    val filteredWords: StateFlow<List<Word>> get() = _filteredWords
+
+
     init {
         loadWords()
     }
 
-     fun loadWords() {
+    fun loadWords() {
         _wordList.value = wordRepository.getWords()
+        _filteredWords.value = _wordList.value
     }
 
     fun shuffleWords() {
         _wordList.value = wordRepository.shuffleWords()
+        _filteredWords.value = _wordList.value
+    }
+
+    fun searchWords(query: String) {
+        _filteredWords.value = wordRepository.searchWords(query)
     }
 }

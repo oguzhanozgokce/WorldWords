@@ -1,18 +1,17 @@
 package com.oguzhanozgokce.worldwords.ui.word
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
-import androidx.fragment.app.Fragment
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.oguzhanozgokce.worldwords.common.BaseFragment
+import com.oguzhanozgokce.worldwords.common.addSimpleTextWatcher
 import com.oguzhanozgokce.worldwords.common.navigateTo
+import com.oguzhanozgokce.worldwords.common.setOnClearClickListener
+import com.oguzhanozgokce.worldwords.common.updateSearchIconVisibility
 import com.oguzhanozgokce.worldwords.databinding.FragmentWordBinding
-import com.oguzhanozgokce.worldwords.model.Word
 import com.oguzhanozgokce.worldwords.helper.TextToSpeechHelper
+import com.oguzhanozgokce.worldwords.model.Word
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -26,8 +25,10 @@ class WordFragment : BaseFragment<FragmentWordBinding>(FragmentWordBinding::infl
     override fun FragmentWordBinding.bind() {
         setupRecyclerView()
         setupSwipeToRefresh()
-        observeWordList()
         wordViewModel.loadWords()
+        observeWordList()
+        setupSearch()
+        hideKeyboard()
         ttsHelper = TextToSpeechHelper(requireContext())
         iwAddWord.setOnClickListener{
             navigateToCustomWord()
@@ -36,11 +37,25 @@ class WordFragment : BaseFragment<FragmentWordBinding>(FragmentWordBinding::infl
 
     private fun FragmentWordBinding.setupRecyclerView() {
         wordAdapter = WordAdapter(
-            emptyList(),
             onItemClick = { word -> navigateToWordDetail(word) },
             onMicClick = { word -> speakEnglishWord(word) }
         )
-        rwWord.adapter = wordAdapter
+        rwWord.apply {
+            itemAnimator = null
+            adapter = wordAdapter
+        }
+    }
+
+    private fun FragmentWordBinding.observeWordList() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            wordViewModel.filteredWords.collect { words ->
+                val recyclerViewState = rwWord.layoutManager?.onSaveInstanceState()
+                wordAdapter.submitList(words) {
+                    rwWord.layoutManager?.onRestoreInstanceState(recyclerViewState)
+                }
+                swipeRefreshLayout.isRefreshing = false
+            }
+        }
     }
 
     private fun navigateToWordDetail(word: Word) {
@@ -61,13 +76,22 @@ class WordFragment : BaseFragment<FragmentWordBinding>(FragmentWordBinding::infl
         }
     }
 
-    private fun FragmentWordBinding.observeWordList() {
-        viewLifecycleOwner.lifecycleScope.launch {
-            wordViewModel.wordList.collect { words ->
-                wordAdapter.updateWords(words)
-                swipeRefreshLayout.isRefreshing = false
+    private fun FragmentWordBinding.setupSearch() {
+        searchEditText.apply {
+            addSimpleTextWatcher { text ->
+                updateSearchIconVisibility(text)
+                wordViewModel.searchWords(text.toString())
+            }
+            setOnClearClickListener {
+                text.clear()
             }
         }
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager =
+            requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
     override fun onDestroyView() {
