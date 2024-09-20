@@ -3,300 +3,1008 @@
     "turkish": "elma",
     "english": "apple",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_apple.png?alt=media&token=6bcced5a-519d-4fc5-8079-3620234f6a07"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_apple.png?alt=media&token=6bcced5a-519d-4fc5-8079-3620234f6a07",
+    "usageEnglish" : [
+      "I eat an apple every day.",
+      "She bought a red apple from the store.",
+      "The apple fell from the tree during the storm."
+    ],
+    "usageTurkish" : [
+      "Her gün bir elma yiyorum.",
+      "Mağazadan kırmızı bir elma aldı.",
+      "Fırtına sırasında elma ağaçtan düştü."
+    ]
+  },
+  {
+    "turkish": "muz",
+    "english": "banana",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_banana.png?alt=media&token=8e8538bf-6c4a-4410-9adf-63e3b84449ce",
+    "usageEnglish": [
+      "I like to eat a banana after lunch.",
+      "She peeled the banana and ate it quickly.",
+      "Bananas are rich in potassium."
+    ],
+    "usageTurkish": [
+      "Öğle yemeğinden sonra muz yemeyi seviyorum.",
+      "Muzu soydu ve hızlıca yedi.",
+      "Muzlar potasyum açısından zengindir."
+    ]
+  },
+  {
+    "turkish": "portakal",
+    "english": "orange",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_orange.png?alt=media&token=c06e5c11-0f27-48ba-87fc-4824cfbbfee0",
+    "usageEnglish": [
+      "I squeezed an orange to make fresh juice.",
+      "Oranges are a great source of Vitamin C.",
+      "The orange tree in our garden is full of fruit."
+    ],
+    "usageTurkish": [
+      "Taze meyve suyu yapmak için bir portakal sıktım.",
+      "Portakallar mükemmel bir C vitamini kaynağıdır.",
+      "Bahçemizdeki portakal ağacı meyve dolu."
+    ]
+  },
+  {
+    "turkish": "çilek",
+    "english": "strawberry",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_strawberry.png?alt=media&token=af46fcbd-73dd-4c79-8a94-ceb8ae14a71a",
+    "usageEnglish": [
+      "We picked fresh strawberries from the farm.",
+      "Strawberries are delicious when added to yogurt.",
+      "She made a strawberry cake for the party."
+    ],
+    "usageTurkish": [
+      "Çiftlikten taze çilek topladık.",
+      "Çilekler yoğurda eklendiğinde lezzetlidir.",
+      "Parti için bir çilekli kek yaptı."
+    ]
+  },
+  {
+    "turkish": "karpuz",
+    "english": "watermelon",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_watermelon.png?alt=media&token=ae91fdf9-e130-4d4d-836a-3de881387add",
+    "usageEnglish": [
+      "We had watermelon at the picnic.",
+      "Watermelon is perfect for hot summer days.",
+      "He cut the watermelon into slices."
+    ],
+    "usageTurkish": [
+      "Piknikte karpuz yedik.",
+      "Karpuz sıcak yaz günleri için mükemmeldir.",
+      "Karpuzu dilimlere kesti."
+    ]
+  },
+  {
+    "turkish": "üzüm",
+    "english": "grapes",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_grapes.png?alt=media&token=d739dd3b-7daa-4120-a84d-48f7511ede65",
+    "usageEnglish": [
+      "She bought a bunch of grapes from the market.",
+      "Grapes can be made into wine.",
+      "The children enjoyed eating grapes in the garden."
+    ],
+    "usageTurkish": [
+      "Pazardan bir salkım üzüm aldı.",
+      "Üzümler şarap yapımında kullanılabilir.",
+      "Çocuklar bahçede üzüm yemekten keyif aldı."
+    ]
+  },
+  {
+    "turkish": "ananas",
+    "english": "pineapple",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_pineapple.png?alt=media&token=585ff7a5-7082-42f7-9254-0bb6ddbe9480",
+    "usageEnglish": [
+      "She added pineapple to the fruit salad.",
+      "Pineapple has a sweet and tangy flavor.",
+      "He bought a fresh pineapple from the store."
+    ],
+    "usageTurkish": [
+      "Meyve salatasına ananas ekledi.",
+      "Ananas tatlı ve ekşi bir tada sahiptir.",
+      "Mağazadan taze bir ananas aldı."
+    ]
+  },
+  {
+    "turkish": "şeftali",
+    "english": "peach",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_peach.png?alt=media&token=061181fc-41d5-4849-9bbd-b9e827c09fbb",
+    "usageEnglish": [
+      "The peach was soft and juicy.",
+      "She made a peach cobbler for dessert.",
+      "I prefer eating fresh peaches in the summer."
+    ],
+    "usageTurkish": [
+      "Şeftali yumuşak ve sulu idi.",
+      "Tatlı için şeftali tatlısı yaptı.",
+      "Yazın taze şeftali yemeyi tercih ederim."
+    ]
+  },
+  {
+    "turkish": "kiraz",
+    "english": "cherry",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_cherry.png?alt=media&token=a39eb87c-7be6-4a55-a2e8-66c46613fec4",
+    "usageEnglish": [
+      "We picked cherries from the tree.",
+      "She loves cherry-flavored ice cream.",
+      "The cherries were bright red and sweet."
+    ],
+    "usageTurkish": [
+      "Ağaçtan kiraz topladık.",
+      "Kiraz aromalı dondurmayı seviyor.",
+      "Kirazlar parlak kırmızı ve tatlıydı."
+    ]
+  },
+  {
+    "turkish": "limon",
+    "english": "lemon",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_lemon.png?alt=media&token=0bcd8eea-c968-4d03-a10e-2eeb0966b212",
+    "usageEnglish": [
+      "I squeezed lemon juice into my tea.",
+      "Lemons are often used in salad dressings.",
+      "He made lemonade from fresh lemons."
+    ],
+    "usageTurkish": [
+      "Çayıma limon suyu sıktım.",
+      "Limonlar genellikle salata soslarında kullanılır.",
+      "Taze limonlardan limonata yaptı."
+    ]
+  },
+  {
+    "turkish": "erik",
+    "english": "plum",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_plum.png?alt=media&token=969b2193-992a-4422-a4c3-b216f2cdf097",
+    "usageEnglish": [
+      "Plums are in season during the summer.",
+      "She ate a ripe plum after dinner.",
+      "The plum tree in our garden has grown tall."
+    ],
+    "usageTurkish": [
+      "Yaz aylarında erikler mevsimindedir.",
+      "Akşam yemeğinden sonra olgun bir erik yedi.",
+      "Bahçemizdeki erik ağacı uzadı."
+    ]
+  },
+  {
+    "turkish": "incir",
+    "english": "fig",
+    "difficulty": 2,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_fig.png?alt=media&token=65807f72-b104-4d33-b745-10f1fc957bba",
+    "usageEnglish": [
+      "Figs are sweet and often eaten dried.",
+      "She used figs in her homemade jam.",
+      "I bought some fresh figs from the market."
+    ],
+    "usageTurkish": [
+      "İncirler tatlıdır ve genellikle kuru olarak yenir.",
+      "Ev yapımı reçelinde incir kullandı.",
+      "Pazardan taze incir aldım."
+    ]
+  },
+  {
+    "turkish": "nar",
+    "english": "pomegranate",
+    "difficulty": 2,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_pomegranate.png?alt=media&token=f8caba39-bd97-44c6-896f-4139ea97d61b",
+    "usageEnglish": [
+      "Pomegranate seeds are delicious in salads.",
+      "She drank pomegranate juice for breakfast.",
+      "The pomegranate tree is full of fruit in the autumn."
+    ],
+    "usageTurkish": [
+      "Nar taneleri salatalarda lezzetlidir.",
+      "Kahvaltıda nar suyu içti.",
+      "Nar ağacı sonbaharda meyve doludur."
+    ]
+  },
+  {
+    "turkish": "kavun",
+    "english": "melon",
+    "difficulty": 1,
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_melon.png?alt=media&token=a0916e97-4d87-47a5-9fe5-2852016ea510",
+    "usageEnglish": [
+      "She served melon as a refreshing dessert.",
+      "The melon was sweet and juicy.",
+      "We bought a melon from the farmer's market."
+    ],
+    "usageTurkish": [
+      "Serinletici bir tatlı olarak kavun servis etti.",
+      "Kavun tatlı ve sulu idi.",
+      "Çiftçi pazarından bir kavun aldık."
+    ]
   },
   {
     "turkish": "kitap",
     "english": "book",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_book.png?alt=media&token=dc47ff62-8586-4328-85fe-1f9029cb610a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_book.png?alt=media&token=dc47ff62-8586-4328-85fe-1f9029cb610a",
+    "usageEnglish" : [
+      "I read a book last night.",
+      "This book is about world history.",
+      "He is writing a book on environmental issues."
+    ],
+    "usageTurkish" : [
+      "Dün gece bir kitap okudum.",
+      "Bu kitap dünya tarihi hakkında.",
+      "Çevre sorunları hakkında bir kitap yazıyor."
+    ]
   },
   {
     "turkish": "araba",
     "english": "car",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_car.png?alt=media&token=4d1bf9b3-284d-437b-8f2e-ab35317dfa5b"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_car.png?alt=media&token=4d1bf9b3-284d-437b-8f2e-ab35317dfa5b",
+    "usageEnglish" : [
+      "I have a blue car.",
+      "The car stopped at the red light.",
+      "The new electric car can drive over 300 miles on a single charge."
+    ],
+    "usageTurkish" : [
+      "Mavi bir arabam var.",
+      "Araba kırmızı ışıkta durdu.",
+      "Yeni elektrikli araba tek şarjla 300 milin üzerinde yol alabiliyor."
+    ]
   },
   {
     "turkish": "masa",
     "english": "table",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_table.svg?alt=media&token=d14b62b3-4749-412f-8544-16806974f3fd"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_table.png?alt=media&token=981bccb0-bc89-4c68-a1a3-f8cadf46f058",
+    "usageEnglish" : [
+      "The table is made of wood.",
+      "She placed the dishes on the table.",
+      "They discussed the plan around the conference table."
+    ],
+    "usageTurkish" : [
+      "Masa ahşaptan yapılmıştır.",
+      "Tabakları masaya koydu.",
+      "Konferans masasında planı tartıştılar."
+    ]
   },
   {
     "turkish": "kalem",
     "english": "pen",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_pen.png?alt=media&token=5de4e82c-8c70-4b53-b024-e732592b8b6a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_pen.png?alt=media&token=5de4e82c-8c70-4b53-b024-e732592b8b6a",
+    "usageEnglish" : [
+      "I need a pen to sign the paper.",
+      "The pen ran out of ink.",
+      "He wrote a letter using his favorite fountain pen."
+    ],
+    "usageTurkish" : [
+      "Kağıdı imzalamak için bir kaleme ihtiyacım var.",
+      "Kalemin mürekkebi bitti.",
+      "En sevdiği dolma kalemle bir mektup yazdı."
+    ]
   },
   {
     "turkish": "bilgisayar",
     "english": "computer",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_computer.png?alt=media&token=f45c2e83-7a54-4522-95db-c7023debacbf"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_computer.png?alt=media&token=f45c2e83-7a54-4522-95db-c7023debacbf",
+    "usageEnglish": [
+      "She bought a new computer.",
+      "The computer is very fast.",
+      "He is working on a complex software project on his computer."
+    ],
+    "usageTurkish" : [
+      "Yeni bir bilgisayar aldı.",
+      "Bilgisayar çok hızlı.",
+      "Bilgisayarında karmaşık bir yazılım projesi üzerinde çalışıyor."
+    ]
   },
   {
     "turkish": "kedi",
     "english": "cat",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_cat.png?alt=media&token=ec37703d-7506-4fdf-830b-b4517fd5872c"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_cat.png?alt=media&token=ec37703d-7506-4fdf-830b-b4517fd5872c",
+    "usageEnglish": [
+      "The cat is sleeping on the couch.",
+      "My cat loves to play with the yarn.",
+      "The black cat quickly climbed the tall tree."
+    ],
+    "usageTurkish" : [
+      "Kedi kanepede uyuyor.",
+      "Kedim iplikle oynamayı çok seviyor.",
+      "Siyah kedi hızlıca yüksek ağaca tırmandı."
+    ]
   },
   {
     "turkish": "köpek",
     "english": "dog",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_dog.png?alt=media&token=660c5633-6e95-4d68-ba63-41f1119d6166"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_dog.png?alt=media&token=660c5633-6e95-4d68-ba63-41f1119d6166",
+    "usageEnglish": [
+      "I have a small dog.",
+      "The dog barked at the stranger.",
+      "The dog quickly learned the new trick."
+    ],
+    "usageTurkish" : [
+      "Küçük bir köpeğim var.",
+      "Köpek yabancıya havladı.",
+      "Köpek yeni numarayı hızla öğrendi."
+    ]
   },
   {
     "turkish": "su",
     "english": "water",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_water.png?alt=media&token=2797ee23-8f1f-4093-b971-a71101fe9f86"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_water.png?alt=media&token=2797ee23-8f1f-4093-b971-a71101fe9f86",
+    "usageEnglish": [
+      "Please drink some water.",
+      "The water in the lake is very clear.",
+      "He poured a glass of water from the pitcher."
+    ],
+    "usageTurkish" : [
+      "Lütfen biraz su iç.",
+      "Göldeki su çok berrak.",
+      "Sürahiden bir bardak su döktü."
+    ]
   },
   {
     "turkish": "ekmek",
     "english": "bread",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bread.png?alt=media&token=313ee4b5-cefc-4ef7-8ff7-75dcae45d811"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bread.png?alt=media&token=313ee4b5-cefc-4ef7-8ff7-75dcae45d811",
+    "usageEnglish": [
+      "I like to eat fresh bread.",
+      "The bakery sells delicious bread.",
+      "He spread butter on the warm slice of bread."
+    ],
+    "usageTurkish" : [
+      "Taze ekmek yemeyi seviyorum.",
+      "Fırın lezzetli ekmekler satıyor.",
+      "Sıcak ekmek diliminin üzerine tereyağı sürdü."
+    ]
   },
   {
     "turkish": "çiçek",
     "english": "flower",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_flower.png?alt=media&token=8382307d-f682-4f3a-8911-7605aa71d9ae"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_flower.png?alt=media&token=8382307d-f682-4f3a-8911-7605aa71d9ae",
+    "usageEnglish": [
+      "The flower is red.",
+      "She picked a beautiful flower from the garden.",
+      "The flowers in the field bloom in the spring."
+    ],
+    "usageTurkish" : [
+      "Çiçek kırmızı.",
+      "Bahçeden güzel bir çiçek kopardı.",
+      "Tarladaki çiçekler ilkbaharda açar."
+    ]
   },
   {
     "turkish": "gözlük",
     "english": "glasses",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_glasses.png?alt=media&token=03a61d32-1e2a-4424-898b-9ae853c21ab8"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_glasses.png?alt=media&token=03a61d32-1e2a-4424-898b-9ae853c21ab8",
+    "usageEnglish": [
+      "She wears glasses.",
+      "I need my glasses to read.",
+      "His new glasses have a blue light filter for computer screens."
+    ],
+    "usageTurkish" : [
+      "Gözlük takıyor.",
+      "Okumak için gözlüğe ihtiyacım var.",
+      "Yeni gözlüklerinde mavi ışık filtresi var."
+    ]
   },
   {
     "turkish": "telefon",
     "english": "phone",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_phone.png?alt=media&token=09bf5067-e527-47fe-9658-9b3296d8b60b"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_phone.png?alt=media&token=09bf5067-e527-47fe-9658-9b3296d8b60b",
+    "usageEnglish": [
+      "I use my phone to call my friend.",
+      "The phone rang during the meeting.",
+      "She sent a message through her phone’s messaging app."
+    ],
+    "usageTurkish" : [
+      "Arkadaşımı aramak için telefonumu kullanıyorum.",
+      "Telefon toplantı sırasında çaldı.",
+      "Mesajlaşma uygulaması aracılığıyla bir mesaj gönderdi."
+    ]
   },
   {
     "turkish": "bina",
     "english": "building",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_building.png?alt=media&token=6141a253-8b2e-49ec-ab43-016553d0edff"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_building.png?alt=media&token=6141a253-8b2e-49ec-ab43-016553d0edff",
+    "usageEnglish": [
+      "This is a tall building.",
+      "The office is located in the tallest building downtown.",
+      "The building was constructed using eco-friendly materials."
+    ],
+    "usageTurkish" : [
+      "Bu yüksek bir bina.",
+      "Ofis şehir merkezindeki en yüksek binada yer alıyor.",
+      "Bina çevre dostu malzemelerle inşa edildi."
+    ]
   },
   {
     "turkish": "uçak",
     "english": "plane",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_plane.png?alt=media&token=4eb25402-8b7e-444e-8872-3883e0e9fb7a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_plane.png?alt=media&token=4eb25402-8b7e-444e-8872-3883e0e9fb7a",
+    "usageEnglish": [
+      "The plane is landing.",
+      "They boarded the plane early.",
+      "The plane flew over the mountains and through the clouds."
+    ],
+    "usageTurkish" : [
+      "Uçak iniş yapıyor.",
+      "Uçağa erken bindiler.",
+      "Uçak dağların üzerinden ve bulutların arasından geçti."
+    ]
   },
   {
     "turkish": "bisiklet",
     "english": "bicycle",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bicycle.png?alt=media&token=ad722037-fd66-4c6e-9f7e-709002491d5b"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bicycle.png?alt=media&token=ad722037-fd66-4c6e-9f7e-709002491d5b",
+    "usageEnglish": [
+      "I ride my bicycle every day.",
+      "She bought a new bicycle for her commute.",
+      "His bicycle is equipped with gears for mountain biking."
+    ],
+    "usageTurkish" : [
+      "Her gün bisiklet sürerim.",
+      "İşe gitmek için yeni bir bisiklet aldı.",
+      "Bisikletinde dağ bisikleti için vitesler var."
+    ]
   },
   {
     "turkish": "el",
     "english": "hand",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/hand.png?alt=media&token=74c6edb5-1d65-419e-8e50-e591567c238e"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/hand.png?alt=media&token=74c6edb5-1d65-419e-8e50-e591567c238e",
+    "usageEnglish": [
+      "My hand is cold.",
+      "She raised her hand to ask a question.",
+      "He offered his hand to help her up after she fell."
+    ],
+    "usageTurkish" : [
+      "Elim üşüyor.",
+      "Soru sormak için elini kaldırdı.",
+      "Düştükten sonra ona elini uzattı."
+    ]
   },
   {
     "turkish": "güneş",
     "english": "sun",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sun.png?alt=media&token=6e23a2de-cb0b-43f5-a7c5-9be4f9b16cf7"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sun.png?alt=media&token=6e23a2de-cb0b-43f5-a7c5-9be4f9b16cf7",
+    "usageEnglish": [
+      "The sun is shining.",
+      "The sun sets in the west.",
+      "The sun’s rays provide energy for the plants to grow."
+    ],
+    "usageTurkish" : [
+      "Güneş parlıyor.",
+      "Güneş batıda batar.",
+      "Güneş ışınları bitkilerin büyümesi için enerji sağlar."
+    ]
   },
   {
     "turkish": "çanta",
     "english": "bag",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bag.png?alt=media&token=fbf3a767-36ed-4479-94c9-e174d321d89a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bag.png?alt=media&token=fbf3a767-36ed-4479-94c9-e174d321d89a",
+    "usageEnglish": [
+      "I carry a bag to school.",
+      "She packed her lunch in a small bag.",
+      "The bag was heavy with books and supplies."
+    ],
+    "usageTurkish" : [
+      "Okula bir çanta taşıyorum.",
+      "Öğle yemeğini küçük bir çantaya koydu.",
+      "Çanta kitaplar ve malzemelerle ağırdı."
+    ]
   },
   {
     "turkish": "yatak",
     "english": "bed",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bag.png?alt=media&token=fbf3a767-36ed-4479-94c9-e174d321d89a"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bed.png?alt=media&token=924ca47a-547e-4209-8919-f9782dd9324f",
+    "usageEnglish": [
+      "I sleep in my bed.",
+      "The bed is very comfortable.",
+      "She made the bed with clean sheets and a warm blanket."
+    ],
+    "usageTurkish" : [
+      "Yatağımda uyurum.",
+      "Yatak çok rahat.",
+      "Temiz çarşaflar ve sıcak bir battaniye ile yatağı yaptı."
+    ]
   },
   {
     "turkish": "ayakkabı",
     "english": "shoe",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_shoe.png?alt=media&token=26e8672d-89bd-429e-ada2-082551d2b19e"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_shoe.png?alt=media&token=26e8672d-89bd-429e-ada2-082551d2b19e",
+    "usageEnglish": [
+      "I wear my shoes to school.",
+      "Her new shoes are very comfortable.",
+      "He tied the laces on his running shoes tightly before the race."
+    ],
+    "usageTurkish" : [
+      "Okula giderken ayakkabılarımı giyerim.",
+      "Yeni ayakkabıları çok rahat.",
+      "Koşu ayakkabılarının bağcıklarını yarış öncesi sıkıca bağladı."
+    ]
   },
   {
     "turkish": "sandalye",
     "english": "chair",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_chair.png?alt=media&token=ffb54e7c-0177-4686-9e0e-b52d6710cf67"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_chair.png?alt=media&token=ffb54e7c-0177-4686-9e0e-b52d6710cf67",
+    "usageEnglish": [
+      "I sit on a chair.",
+      "The chair in the living room is very soft.",
+      "He bought a new office chair for better back support."
+    ],
+    "usageTurkish" : [
+      "Bir sandalyeye oturuyorum.",
+      "Oturma odasındaki sandalye çok yumuşak.",
+      "Daha iyi sırt desteği için yeni bir ofis sandalyesi aldı."
+    ]
   },
   {
     "turkish": "yemek",
     "english": "food",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_food.png?alt=media&token=2571e8e0-aea9-40c7-aa92-3b660f083fb7"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_food.png?alt=media&token=2571e8e0-aea9-40c7-aa92-3b660f083fb7",
+    "usageEnglish": [
+      "I love eating Italian food.",
+      "The food was delicious and fresh.",
+      "They donated food to the local shelter every week."
+    ],
+    "usageTurkish" : [
+      "İtalyan yemeklerini yemeyi seviyorum.",
+      "Yemek çok lezzetli ve tazeydi.",
+      "Her hafta yerel barınağa yemek bağışladılar."
+    ]
   },
   {
     "turkish": "kapı",
     "english": "door",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_door.png?alt=media&token=74657de1-c75c-4e3f-876e-c3da2b9a8abe"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_door.png?alt=media&token=74657de1-c75c-4e3f-876e-c3da2b9a8abe",
+    "usageEnglish": [
+      "Close the door, please.",
+      "The door is painted red.",
+      "The front door creaked as it opened slowly."
+    ],
+    "usageTurkish" : [
+      "Kapıyı kapat, lütfen.",
+      "Kapı kırmızıya boyandı.",
+      "Ön kapı yavaşça açılırken gıcırdadı."
+    ]
   },
   {
     "turkish": "pencere",
     "english": "window",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_window.png?alt=media&token=c1574be8-d0d1-4290-8d5d-852899c975cd"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_window.png?alt=media&token=c1574be8-d0d1-4290-8d5d-852899c975cd",
+    "usageEnglish": [
+      "Open the window for fresh air.",
+      "She looked out the window and saw the rain.",
+      "The window shattered when the ball hit it."
+    ],
+    "usageTurkish" : [
+      "Temiz hava almak için pencereyi aç.",
+      "Yağmuru görmek için pencereye baktı.",
+      "Top vurduğunda pencere kırıldı."
+    ]
   },
   {
     "turkish": "ağaç",
     "english": "tree",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_tree.png?alt=media&token=c61ec4c7-9b5a-4db1-8f18-fd5b71c270c1"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_tree.png?alt=media&token=c61ec4c7-9b5a-4db1-8f18-fd5b71c270c1",
+    "usageEnglish": [
+      "The tree is very tall.",
+      "The tree in my backyard grows apples.",
+      "In the fall, the leaves of the tree turn bright orange."
+    ],
+    "usageTurkish" : [
+      "Ağaç çok uzun.",
+      "Arka bahçemdeki ağaç elma veriyor.",
+      "Sonbaharda, ağacın yaprakları parlak turuncuya döner."
+    ]
   },
   {
     "turkish": "otobüs",
     "english": "bus",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bus.png?alt=media&token=879344dd-2f64-49c5-a867-d73b6c38af89"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_bus.png?alt=media&token=879344dd-2f64-49c5-a867-d73b6c38af89",
+    "usageEnglish": [
+      "I take the bus to school.",
+      "The bus was late this morning.",
+      "He missed the bus and had to walk home."
+    ],
+    "usageTurkish" : [
+      "Okula otobüsle giderim.",
+      "Otobüs bu sabah geç kaldı.",
+      "Otobüsü kaçırdı ve eve yürümek zorunda kaldı."
+    ]
   },
   {
     "turkish": "deniz",
     "english": "sea",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sea.png?alt=media&token=ecd4a8db-8333-4968-88fd-c5e842a0b88d"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_sea.png?alt=media&token=ecd4a8db-8333-4968-88fd-c5e842a0b88d",
+    "usageEnglish": [
+      "The sea is calm today.",
+      "We sailed across the sea to a nearby island.",
+      "The sea is home to many different marine species."
+    ],
+    "usageTurkish" : [
+      "Deniz bugün sakin.",
+      "Yakındaki bir adaya deniz üzerinden yelken açtık.",
+      "Deniz birçok farklı deniz canlısına ev sahipliği yapar."
+    ]
   },
   {
     "turkish": "park",
     "english": "park",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_park.png?alt=media&token=05dff5e3-1723-472b-ac8b-a57976768292"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_park.png?alt=media&token=05dff5e3-1723-472b-ac8b-a57976768292",
+    "usageEnglish": [
+      "We went to the park to play.",
+      "The park is full of people on weekends.",
+      "They took a long walk through the park at sunset."
+    ],
+    "usageTurkish" : [
+      "Oynamak için parka gittik.",
+      "Park hafta sonları insanlarla dolu.",
+      "Gün batımında parkta uzun bir yürüyüş yaptılar."
+    ]
   },
   {
     "turkish": "dağ",
     "english": "mountain",
     "difficulty": 1,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_mountain.png?alt=media&token=8a3e540c-4a7e-447a-a480-8649ba22b079"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_mountain.png?alt=media&token=8a3e540c-4a7e-447a-a480-8649ba22b079",
+    "usageEnglish": [
+      "The mountain is covered in snow.",
+      "We hiked up the mountain trail.",
+      "The view from the top of the mountain was breathtaking."
+    ],
+    "usageTurkish" : [
+      "Dağ karla kaplı.",
+      "Dağ yolunda yürüyüş yaptık.",
+      "Dağın zirvesinden manzara nefes kesiciydi."
+    ]
   },
   {
     "turkish": "toplantı",
     "english": "meeting",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_meet.png?alt=media&token=f8a61068-b221-46b5-bd99-731d52dbd2f7"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_meet.png?alt=media&token=f8a61068-b221-46b5-bd99-731d52dbd2f7",
+    "usageEnglish": [
+      "The meeting starts at 10 AM.",
+      "We had a long meeting about the new project.",
+      "The meeting concluded with a detailed action plan."
+    ],
+    "usageTurkish" : [
+      "Toplantı sabah 10'da başlıyor.",
+      "Yeni proje hakkında uzun bir toplantı yaptık.",
+      "Toplantı, ayrıntılı bir eylem planı ile sonuçlandı."
+    ]
   },
   {
     "turkish": "öğrenci",
     "english": "student",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_student.png?alt=media&token=8374818c-5e49-4204-9284-2f6943a8eee8"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_student.png?alt=media&token=8374818c-5e49-4204-9284-2f6943a8eee8",
+    "usageEnglish": [
+      "I am a student at the university.",
+      "The student asked a question during the lecture.",
+      "She is the top student in her class, always excelling in exams."
+    ],
+    "usageTurkish" : [
+      "Ben üniversitede öğrenciyim.",
+      "Öğrenci ders sırasında bir soru sordu.",
+      "Sınıfın en iyi öğrencisi, her zaman sınavlarda başarılı oluyor."
+    ]
   },
   {
     "turkish": "üniversite",
     "english": "university",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_university.png?alt=media&token=9c8652c0-7484-47ec-878d-1e24e6684242"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_university.png?alt=media&token=9c8652c0-7484-47ec-878d-1e24e6684242",
+    "usageEnglish": [
+      "I attend university in the city.",
+      "The university offers many different courses.",
+      "He graduated from one of the top universities in the country."
+    ],
+    "usageTurkish" : [
+      "Şehirdeki üniversitede okuyorum.",
+      "Üniversite birçok farklı kurs sunuyor.",
+      "Ülkenin en iyi üniversitelerinden birinden mezun oldu."
+    ]
   },
   {
     "turkish": "yabancı",
     "english": "foreigner",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_foreigner.png?alt=media&token=70f6c9cc-c62d-405d-928a-2b618158d3da"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_foreigner.png?alt=media&token=70f6c9cc-c62d-405d-928a-2b618158d3da",
+    "usageEnglish": [
+      "He is a foreigner in this country.",
+      "The foreigner asked for directions to the nearest hotel.",
+      "As a foreigner, it took him some time to adjust to the new culture."
+    ],
+    "usageTurkish" : [
+      "Bu ülkede bir yabancı.",
+      "Yabancı, en yakın otele nasıl gideceğini sordu.",
+      "Bir yabancı olarak, yeni kültüre alışması biraz zaman aldı."
+    ]
   },
   {
     "turkish": "başarı",
     "english": "success",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_success.png?alt=media&token=6d514a77-aefe-469f-89b1-7c5978bd0a6b"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_success.png?alt=media&token=6d514a77-aefe-469f-89b1-7c5978bd0a6b",
+    "usageEnglish": [
+      "Success requires hard work.",
+      "She achieved great success in her career.",
+      "His success is a result of years of dedication and perseverance."
+    ],
+    "usageTurkish" : [
+      "Başarı, sıkı çalışma gerektirir.",
+      "Kariyerinde büyük başarı elde etti.",
+      "Başarısı, yılların adanmışlık ve sabrının bir sonucudur."
+    ]
   },
   {
     "turkish": "geliştirmek",
     "english": "improve",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_improve.png?alt=media&token=7380c3d7-da62-4423-a504-e3aa2e1ae050"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_improve.png?alt=media&token=7380c3d7-da62-4423-a504-e3aa2e1ae050",
+    "usageEnglish": [
+      "I want to improve my English.",
+      "He worked hard to improve his performance at work.",
+      "The new system was designed to improve efficiency and reduce costs."
+    ],
+    "usageTurkish" : [
+      "İngilizcemi geliştirmek istiyorum.",
+      "İşyerinde performansını artırmak için çok çalıştı.",
+      "Yeni sistem, verimliliği artırmak ve maliyetleri düşürmek için tasarlandı."
+    ]
   },
   {
     "turkish": "teknoloji",
     "english": "technology",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_technology.png?alt=media&token=f49d7b64-e2a8-421a-bdd1-9152f45120d5"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_technology.png?alt=media&token=f49d7b64-e2a8-421a-bdd1-9152f45120d5",
+    "usageEnglish": [
+      "Technology is advancing rapidly.",
+      "The new technology has revolutionized the industry.",
+      "He is researching how technology can improve healthcare systems."
+    ],
+    "usageTurkish" : [
+      "Teknoloji hızla ilerliyor.",
+      "Yeni teknoloji sektörde devrim yarattı.",
+      "Sağlık sistemlerini iyileştirmek için teknolojinin nasıl kullanılacağını araştırıyor."
+    ]
   },
   {
     "turkish": "müzik",
     "english": "music",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_music.png?alt=media&token=c90882b9-cc79-4e7f-889a-8ae7b4949706"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_music.png?alt=media&token=c90882b9-cc79-4e7f-889a-8ae7b4949706",
+    "usageEnglish": [
+      "I love listening to music.",
+      "She plays music on her guitar every evening.",
+      "The music industry has changed drastically with the rise of streaming services."
+    ],
+    "usageTurkish" : [
+      "Müzik dinlemeyi seviyorum.",
+      "Her akşam gitarıyla müzik çalıyor.",
+      "Müzik endüstrisi, yayın hizmetlerinin yükselişiyle birlikte büyük ölçüde değişti."
+    ]
   },
   {
     "turkish": "sohbet",
     "english": "conversation",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_conversation.png?alt=media&token=44d27cd9-55d6-4823-b1db-cca8d243ddb7"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_conversation.png?alt=media&token=44d27cd9-55d6-4823-b1db-cca8d243ddb7",
+    "usageEnglish": [
+      "We had a short conversation.",
+      "Their conversation lasted for hours.",
+      "The conversation covered a wide range of topics, from politics to philosophy."
+    ],
+    "usageTurkish" : [
+      "Kısa bir sohbet yaptık.",
+      "Sohbetleri saatler sürdü.",
+      "Sohbet, politikadan felsefeye kadar geniş bir yelpazeyi kapsıyordu."
+    ]
   },
   {
     "turkish": "doğa",
     "english": "nature",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_nature.png?alt=media&token=accfd961-3fff-40fd-8129-d039dc09775f"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_nature.png?alt=media&token=accfd961-3fff-40fd-8129-d039dc09775f",
+    "usageEnglish": [
+      "Nature is beautiful.",
+      "We spent the day exploring nature in the national park.",
+      "The beauty of nature can inspire creativity and calm the mind."
+    ],
+    "usageTurkish" : [
+      "Doğa çok güzel.",
+      "Milli parkta doğayı keşfederek bir gün geçirdik.",
+      "Doğanın güzelliği yaratıcılığı teşvik edebilir ve zihni sakinleştirebilir."
+    ]
   },
   {
     "turkish": "keşfetmek",
     "english": "explore",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_explore.png?alt=media&token=d2f443f5-649f-46e5-8dd1-56da65d3aa38"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_explore.png?alt=media&token=d2f443f5-649f-46e5-8dd1-56da65d3aa38",
+    "usageEnglish": [
+      "I love to explore new places.",
+      "They set out to explore the unknown regions of the forest.",
+      "He spent years exploring the depths of the ocean in search of new species."
+    ],
+    "usageTurkish" : [
+      "Yeni yerler keşfetmeyi seviyorum.",
+      "Ormanın bilinmeyen bölgelerini keşfetmek için yola çıktılar.",
+      "Okyanusun derinliklerini keşfederek yeni türler aradı."
+    ]
   },
   {
     "turkish": "kültür",
     "english": "culture",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_culture.png?alt=media&token=83bac0c9-6bb0-42fb-b5de-26f52d59c429"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_culture.png?alt=media&token=83bac0c9-6bb0-42fb-b5de-26f52d59c429",
+    "usageEnglish": [
+      "Every country has its own culture.",
+      "We learned a lot about Japanese culture during our visit.",
+      "The festival celebrates the rich and diverse culture of the local community."
+    ],
+    "usageTurkish" : [
+      "Her ülkenin kendi kültürü vardır.",
+      "Japonya'yı ziyaretimiz sırasında Japon kültürü hakkında çok şey öğrendik.",
+      "Festival, yerel topluluğun zengin ve çeşitli kültürünü kutluyor."
+    ]
   },
   {
     "turkish": "tecrübe",
     "english": "experience",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_experience.png?alt=media&token=1948d286-0f84-4bac-a5bf-cc467073c23c"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_experience.png?alt=media&token=1948d286-0f84-4bac-a5bf-cc467073c23c",
+    "usageEnglish": [
+      "I had a great experience at the event.",
+      "The trip was a memorable experience.",
+      "His years of experience in the field made him the ideal candidate for the job."
+    ],
+    "usageTurkish" : [
+      "Etkinlikte harika bir deneyim yaşadım.",
+      "Gezi unutulmaz bir deneyimdi.",
+      "Sahadaki yıllara dayanan deneyimi, onu bu iş için ideal aday yaptı."
+    ]
   },
   {
     "turkish": "felsefe",
     "english": "philosophy",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_philosophy.png?alt=media&token=0ac65419-3737-491b-93c5-fc03fd7f2f5f"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_philosophy.png?alt=media&token=0ac65419-3737-491b-93c5-fc03fd7f2f5f",
+    "usageEnglish": [
+      "He is studying philosophy at university.",
+      "Philosophy explores fundamental questions about life and existence.",
+      "Her book offers a new perspective on ancient Greek philosophy."
+    ],
+    "usageTurkish" : [
+      "Üniversitede felsefe okuyor.",
+      "Felsefe, hayat ve varoluşla ilgili temel soruları araştırır.",
+      "Kitabı, antik Yunan felsefesine yeni bir bakış açısı sunuyor."
+    ]
   },
   {
     "turkish": "tatil",
     "english": "vacation",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_vacation.png?alt=media&token=9e7637f8-04eb-491f-9747-0fded9016993"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_vacation.png?alt=media&token=9e7637f8-04eb-491f-9747-0fded9016993",
+    "usageEnglish": [
+      "We went on a vacation last summer.",
+      "The family planned a two-week vacation in Italy.",
+      "They spent their vacation exploring the hidden beaches of the tropical island."
+    ],
+    "usageTurkish" : [
+      "Geçen yaz tatil yaptık.",
+      "Aile İtalya'da iki haftalık bir tatil planladı.",
+      "Tatilini tropikal adanın gizli plajlarını keşfederek geçirdiler."
+    ]
   },
   {
     "turkish": "ekonomi",
     "english": "economy",
     "difficulty": 2,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_economic.png?alt=media&token=814d054a-5dd9-41f5-b249-aaf6ebdc98a3"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_economic.png?alt=media&token=814d054a-5dd9-41f5-b249-aaf6ebdc98a3",
+    "usageEnglish": [
+      "The economy is growing.",
+      "Experts are analyzing the effects of inflation on the global economy.",
+      "The country’s economy relies heavily on exports and international trade."
+    ],
+    "usageTurkish" : [
+      "Ekonomi büyüyor.",
+      "Uzmanlar, enflasyonun küresel ekonomi üzerindeki etkilerini analiz ediyor.",
+      "Ülkenin ekonomisi büyük ölçüde ihracat ve uluslararası ticarete dayanıyor."
+    ]
   },
   {
     "turkish": "karmaşıklık",
     "english": "complexity",
     "difficulty": 3,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_complexity.png?alt=media&token=0799ed67-9d54-4a2c-9880-bf180c7012a1"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_complexity.png?alt=media&token=0799ed67-9d54-4a2c-9880-bf180c7012a1",
+    "usageEnglish": [
+      "The problem’s complexity makes it hard to solve.",
+      "The complexity of the issue requires careful consideration.",
+      "His research focuses on the complexity of human behavior and decision-making."
+    ],
+    "usageTurkish" : [
+      "Sorunun karmaşıklığı çözülmesini zorlaştırıyor.",
+      "Konunun karmaşıklığı dikkatli düşünmeyi gerektiriyor.",
+      "Araştırması, insan davranışı ve karar verme sürecinin karmaşıklığına odaklanıyor."
+    ]
   },
   {
     "turkish": "strateji",
     "english": "strategy",
     "difficulty": 3,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_strategy.png?alt=media&token=2ae9e9bd-8a06-4b43-867b-329c3141ad48"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_strategy.png?alt=media&token=2ae9e9bd-8a06-4b43-867b-329c3141ad48",
+    "usageEnglish": [
+      "We need a new strategy.",
+      "The company's strategy focuses on long-term growth.",
+      "Developing an effective strategy requires a deep understanding of the market."
+    ],
+    "usageTurkish" : [
+      "Yeni bir stratejiye ihtiyacımız var.",
+      "Şirketin stratejisi uzun vadeli büyümeye odaklanıyor.",
+      "Etkili bir strateji geliştirmek, piyasayı derinlemesine anlamayı gerektirir."
+    ]
   },
   {
     "turkish": "analiz",
     "english": "analysis",
     "difficulty": 3,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_analysis.png?alt=media&token=2ad81fe0-9663-475d-95f3-6c7bd0b43ea8"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_analysis.png?alt=media&token=2ad81fe0-9663-475d-95f3-6c7bd0b43ea8",
+    "usageEnglish": [
+      "We did an analysis of the data.",
+      "The report includes an in-depth analysis of the financial statements.",
+      "His analysis of the situation provided valuable insights for the project."
+    ],
+    "usageTurkish" : [
+      "Verilerin analizini yaptık.",
+      "Rapor, mali tabloların derinlemesine bir analizini içeriyor.",
+      "Durumun analizi, projeye değerli bilgiler sağladı."
+    ]
   },
   {
     "turkish": "planlama",
     "english": "planning",
     "difficulty": 3,
-    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_planning.png?alt=media&token=57bb2716-c74b-4ed7-b4d6-9f077cff4a0b"
+    "image": "https://firebasestorage.googleapis.com/v0/b/ecommercecompose-6fe24.appspot.com/o/ic_planning.png?alt=media&token=57bb2716-c74b-4ed7-b4d6-9f077cff4a0b",
+    "usageEnglish": [
+      "Planning is important for success.",
+      "She is responsible for planning the event.",
+      "Effective planning ensures that resources are allocated efficiently."
+    ],
+    "usageTurkish" : [
+      "Planlama, başarı için önemlidir.",
+      "Etkinliği planlamaktan sorumlu.",
+      "Etkili planlama, kaynakların verimli bir şekilde tahsis edilmesini sağlar."
+    ]
   }
 ]

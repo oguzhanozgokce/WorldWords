@@ -2,7 +2,8 @@ package com.oguzhanozgokce.worldwords.data
 
 import android.content.SharedPreferences
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.oguzhanozgokce.worldwords.common.getList
+import com.oguzhanozgokce.worldwords.common.saveList
 import com.oguzhanozgokce.worldwords.model.Word
 import javax.inject.Inject
 
@@ -19,20 +20,11 @@ class SharedPreferencesDataSource @Inject constructor(
     }
 
      fun saveWordsToSharedPreferences(words: List<Word>) {
-        val editor = sharedPreferences.edit()
-        val json = gson.toJson(words)
-        editor.putString(GET_WORD_KEY, json)
-        editor.apply()
+         sharedPreferences.saveList(GET_WORD_KEY, gson, words)
     }
 
     fun getWordsFromSharedPreferences(): List<Word> {
-        val json = sharedPreferences.getString(GET_WORD_KEY, null)
-        return if (json != null) {
-            val type = object : TypeToken<List<Word>>() {}.type
-            gson.fromJson(json, type)
-        } else {
-            emptyList()
-        }
+        return sharedPreferences.getList(GET_WORD_KEY, gson)
     }
 
     fun isFirstRun(): Boolean {
@@ -64,21 +56,26 @@ class SharedPreferencesDataSource @Inject constructor(
         return shuffledWords
     }
 
-    private fun saveLearnedWords(words: List<Word>) {
-        val editor = sharedPreferences.edit()
-        val json = gson.toJson(words)
-        editor.putString(LEARNED_WORDS_KEY, json)
-        editor.apply()
+    fun searchWords(query: String): List<Word> {
+        val words = getWordsFromSharedPreferences()
+        return if (query.isEmpty()) {
+            words
+        } else {
+            words.filter { word ->
+                word.english.contains(query, ignoreCase = true) || word.turkish.contains(
+                    query,
+                    ignoreCase = true
+                )
+            }
+        }
     }
 
-     fun getLearnedWords(): List<Word> {
-        val json = sharedPreferences.getString(LEARNED_WORDS_KEY, null)
-        return if (json != null) {
-            val type = object : TypeToken<List<Word>>() {}.type
-            gson.fromJson(json, type)
-        } else {
-            emptyList()
-        }
+    private fun saveLearnedWords(words: List<Word>) {
+        sharedPreferences.saveList(LEARNED_WORDS_KEY, gson, words)
+    }
+
+    fun getLearnedWords(): List<Word> {
+         return sharedPreferences.getList(LEARNED_WORDS_KEY, gson)
     }
 
     fun addLearnedWord(word: Word) {
@@ -104,20 +101,11 @@ class SharedPreferencesDataSource @Inject constructor(
     }
 
     private fun saveSavedWords(words: List<Word>) {
-        val editor = sharedPreferences.edit()
-        val json = gson.toJson(words)
-        editor.putString(SAVED_WORDS_KEY, json)
-        editor.apply()
+        sharedPreferences.saveList(SAVED_WORDS_KEY, gson, words)
     }
 
     fun getSavedWords(): List<Word> {
-        val json = sharedPreferences.getString(SAVED_WORDS_KEY, null)
-        return if (json != null) {
-            val type = object : TypeToken<List<Word>>() {}.type
-            gson.fromJson(json, type)
-        } else {
-            emptyList()
-        }
+        return sharedPreferences.getList(SAVED_WORDS_KEY, gson)
     }
 
     fun addSavedWord(word: Word) {
