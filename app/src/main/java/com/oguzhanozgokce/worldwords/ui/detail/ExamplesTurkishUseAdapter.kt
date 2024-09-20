@@ -3,17 +3,18 @@ package com.oguzhanozgokce.worldwords.ui.detail
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.isInvisible
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.oguzhanozgokce.worldwords.databinding.ItemTurkishLayoutBinding
 
 class ExamplesTurkishUseAdapter(
-    private val examples: List<String>,
-    private val onClickCard : (String) -> Unit
-) : RecyclerView.Adapter<ExamplesTurkishUseAdapter.ExampleTurkishViewHolder>() {
+    private val onClickCard: (String) -> Unit
+) : ListAdapter<String, ExamplesTurkishUseAdapter.ExampleTurkishViewHolder>(ExampleDiffCallback()) {
 
     inner class ExampleTurkishViewHolder(private val binding: ItemTurkishLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(example: String) {
-            with(binding){
+            with(binding) {
                 tvUsageExample.text = example
                 itemView.setOnClickListener {
                     tvUsageExample.isInvisible = !tvUsageExample.isInvisible
@@ -29,10 +30,16 @@ class ExamplesTurkishUseAdapter(
     }
 
     override fun onBindViewHolder(holder: ExampleTurkishViewHolder, position: Int) {
-        holder.bind(examples[position])
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int {
-        return examples.size
+    class ExampleDiffCallback : DiffUtil.ItemCallback<String>() {
+        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
+            return oldItem == newItem
+        }
     }
 }

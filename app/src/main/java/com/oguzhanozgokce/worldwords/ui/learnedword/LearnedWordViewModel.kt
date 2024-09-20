@@ -32,5 +32,4 @@ class LearnedWordViewModel @Inject constructor(private val wordRepository: WordR
     fun isLearningListEmpty(): Boolean {
         return wordRepository.isLearningListEmpty()
     }
-
 }

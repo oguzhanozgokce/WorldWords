@@ -14,8 +14,8 @@ class CustomWordViewModel @Inject constructor(private val wordRepository: WordRe
     private val _customWordList = MutableStateFlow<List<Word>>(emptyList())
     val customWordList: StateFlow<List<Word>> get() = _customWordList
 
-    fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String) {
-        wordRepository.addCustomWord(turkish, english, difficulty, imageUrl)
+    fun addCustomWord(turkish: String, english: String, difficulty: Int, imageUrl: String, usageEnglish: List<String>, usageTurkish: List<String>) {
+        wordRepository.addCustomWord(turkish, english, difficulty, imageUrl, usageEnglish, usageTurkish)
         _customWordList.value = wordRepository.getWords()
     }
 }

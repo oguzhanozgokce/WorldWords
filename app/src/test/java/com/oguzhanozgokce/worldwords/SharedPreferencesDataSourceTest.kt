@@ -8,7 +8,6 @@ import com.oguzhanozgokce.worldwords.model.Word
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertTrue
 import junit.framework.TestCase.fail
-import org.junit.Assert.assertNotEquals
 import org.junit.Before
 import org.junit.Test
 import org.mockito.ArgumentMatchers.anyBoolean
@@ -41,7 +40,7 @@ class SharedPreferencesDataSourceTest{
 
     @Test
     fun `saveWordsToSharedPreferences saves words correctly`() {
-        val words = listOf(Word("elma", "apple", 2, ""), Word("muz", "banana",3,""))
+        val words = listOf(Word("elma", "apple", 2, "", emptyList()), Word("muz", "banana",3,"", emptyList()))
         sharedPreferencesDataSource.saveWordsToSharedPreferences(words)
         verify(editor).putString(eq("get_word_key"), anyString())
         verify(editor).apply()
@@ -49,7 +48,7 @@ class SharedPreferencesDataSourceTest{
 
     @Test
     fun `getWordsFromSharedPreferences returns correct word list`() {
-        val wordList = listOf(Word("elma", "apple", 2, ""))
+        val wordList = listOf(Word("elma", "apple", 2, "", emptyList()))
         val wordListJson = gson.toJson(wordList)
         whenever(sharedPreferences.getString(eq("get_word_key"), anyOrNull())).thenReturn(wordListJson)
         val result = sharedPreferencesDataSource.getWordsFromSharedPreferences()
@@ -81,8 +80,8 @@ class SharedPreferencesDataSourceTest{
 
     @Test
     fun `addWordToSharedPreferences adds word to existing list`() {
-        val existingWords = listOf(Word("elma", "apple", 1,""))
-        val newWord = Word("portakal", "orange", 1,"")
+        val existingWords = listOf(Word("elma", "apple", 1,"", emptyList()))
+        val newWord = Word("portakal", "orange", 1,"", emptyList())
         val json = gson.toJson(existingWords)
         whenever(sharedPreferences.getString(eq("get_word_key"), anyOrNull())).thenReturn(json)
 
@@ -93,8 +92,8 @@ class SharedPreferencesDataSourceTest{
 
     @Test
     fun `removeWordFromSharedPreferences removes word from existing list`() {
-        val existingWords = listOf(Word("elma", "apple", 1,""))
-        val wordToRemove = Word("elma", "apple", 1,"")
+        val existingWords = listOf(Word("elma", "apple", 1,"" , emptyList()))
+        val wordToRemove = Word("elma", "apple", 1,"", emptyList())
         val json = gson.toJson(existingWords)
         whenever(sharedPreferences.getString(eq("get_word_key"), anyOrNull())).thenReturn(json)
         sharedPreferencesDataSource.removeWordFromSharedPreferences(wordToRemove)
@@ -105,10 +104,10 @@ class SharedPreferencesDataSourceTest{
     @Test
     fun `shuffleWordsAndSave returns shuffled word list`() {
         val wordList = mutableListOf(
-            Word("elma", "apple", 1, ""),
-            Word("muz", "banana", 1, ""),
-            Word("armut", "pear", 1, ""),
-            Word("portakal", "orange", 1, ""))
+            Word("elma", "apple", 1, "", emptyList()),
+            Word("muz", "banana", 1, "", emptyList()),
+            Word("armut", "pear", 1, "", emptyList()),
+            Word("portakal", "orange", 1, "", emptyList()))
         val json = gson.toJson(wordList)
         whenever(sharedPreferences.getString(eq("get_word_key"), eq(null))).thenReturn(json)
         val shuffledList = sharedPreferencesDataSource.shuffleWordsAndSave()

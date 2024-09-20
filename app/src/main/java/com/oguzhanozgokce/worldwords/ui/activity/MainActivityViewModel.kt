@@ -10,7 +10,7 @@ class MainActivityViewModel @Inject constructor(
     private val wordRepository: WordRepository
 ) : ViewModel() {
 
-     fun saveJsonDataIfFirstTime() {
+    fun saveJsonDataIfFirstTime() {
         wordRepository.saveJsonDataToSharedPrefsIfFirstTime()
     }
 }

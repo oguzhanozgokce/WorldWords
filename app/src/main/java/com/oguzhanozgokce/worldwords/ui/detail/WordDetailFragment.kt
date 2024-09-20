@@ -1,19 +1,17 @@
 package com.oguzhanozgokce.worldwords.ui.detail
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.oguzhanozgokce.worldwords.R
 import com.oguzhanozgokce.worldwords.common.showCustomAlertDialog
@@ -84,14 +82,14 @@ class WordDetailFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        examplesAdapter = ExamplesUseAdapter(emptyList()) { example ->
+        examplesAdapter = ExamplesUseAdapter { example ->
             speakWord(example)
         }
         binding.rwUsageExample.adapter = examplesAdapter
     }
 
     private fun setupTurkishRecyclerView() {
-        examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(emptyList()) { example ->
+        examplesTurkishUseAdapter = ExamplesTurkishUseAdapter{ example ->
             requireContext().showToast("Clicked : $example")
         }
         binding.rwMeaning.adapter = examplesTurkishUseAdapter
@@ -106,15 +104,14 @@ class WordDetailFragment : Fragment() {
         wordDetailViewModel.loadUsageExamples(word)
         lifecycleScope.launch {
             wordDetailViewModel.usageExamples.collect { examples ->
-                examplesAdapter = ExamplesUseAdapter(examples) { example ->
-                    speakWord(example)
-                }
+                examplesAdapter.submitList(examples)
                 binding.rwUsageExample.adapter = examplesAdapter
+
             }
         }
         lifecycleScope.launch {
             wordDetailViewModel.usageTurkishExamples.collect { turkishExamples ->
-                examplesTurkishUseAdapter = ExamplesTurkishUseAdapter(turkishExamples) { }
+                examplesTurkishUseAdapter.submitList(turkishExamples)
                 binding.rwMeaning.adapter = examplesTurkishUseAdapter
             }
         }

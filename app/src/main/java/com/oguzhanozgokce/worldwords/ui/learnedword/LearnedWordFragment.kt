@@ -31,7 +31,6 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
 
     private fun FragmentLearnedWordBinding.setupRecyclerView() {
         learnedWordAdapter = LearnedWordAdapter(
-            emptyList(),
             onMicClick = { word -> speakEnglishWord(word) },
             onDeleteClick = { word -> showDeleteConfirmationDialog(word) },
         )
@@ -45,7 +44,7 @@ class LearnedWordFragment : BaseFragment<FragmentLearnedWordBinding>(FragmentLea
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 learnedWordViewModel.learnedWords.collect { words ->
                     isView()
-                    learnedWordAdapter.updateWords(words)
+                    learnedWordAdapter.submitList(words)
                 }
             }
         }

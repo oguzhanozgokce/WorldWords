@@ -29,7 +29,6 @@ class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::infl
 
     private fun FragmentSaveBinding.setupRecyclerView() {
         saveAdapter = SaveAdapter(
-            emptyList(),
             onItemClick = { word -> navigateToWordDetail(word) },
             onMickClick = { word -> speakEnglishWord(word) }
         )
@@ -40,7 +39,7 @@ class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::infl
         viewLifecycleOwner.lifecycleScope.launch {
             saveViewModel.saveWordList.collect { savedWords ->
                 isView()
-                saveAdapter.updateWords(savedWords)
+                saveAdapter.submitList(savedWords)
             }
         }
     }

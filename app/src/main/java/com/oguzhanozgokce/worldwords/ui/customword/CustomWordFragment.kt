@@ -26,7 +26,9 @@ class CustomWordFragment :
                     turkishWord,
                     englishWord,
                     difficultyLevel,
-                    imageUrl
+                    imageUrl,
+                    emptyList(),
+                    emptyList()
                 )
                 Toast.makeText(requireContext(), "Word successfully added", Toast.LENGTH_SHORT)
                     .show()

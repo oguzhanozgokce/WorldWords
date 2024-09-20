@@ -34,7 +34,7 @@ class WordDetailViewModel @Inject constructor(
 
 
     fun loadUsageExamples(word: Word) {
-        _usageExamples.value = wordRepository.getUsageExamples(word) ?: emptyList()
+        _usageExamples.value = wordRepository.getUsageExamples(word)
         _usageTurkishExamples.value = wordRepository.getUsageTurkishExamples(word) ?: emptyList()
     }
 
@@ -50,12 +50,12 @@ class WordDetailViewModel @Inject constructor(
 
     fun addWordToSavedList(word: Word) {
         wordRepository.addSavedWord(word)
-        _saveWordList.value = wordRepository.getSavedWords()
+        getSavedWords()
     }
 
     fun removeWordFromSavedList(word: Word) {
         wordRepository.removeSavedWord(word)
-        _saveWordList.value = wordRepository.getSavedWords()
+        getSavedWords()
     }
 
     fun isWordInSavedList(word: Word): Boolean {
@@ -64,11 +64,19 @@ class WordDetailViewModel @Inject constructor(
 
     private fun removeWorkSharedList(word: Word){
         wordRepository.removeWord(word)
-        _wordList.value = wordRepository.getWords()
+        updateList()
     }
 
     fun addWord(word: Word) {
         wordRepository.addWord(word)
+        updateList()
+    }
+
+    private fun updateList() {
         _wordList.value = wordRepository.getWords()
+    }
+
+    private fun getSavedWords() {
+        _saveWordList.value = wordRepository.getSavedWords()
     }
 }
