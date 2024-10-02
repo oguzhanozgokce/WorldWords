@@ -30,7 +30,7 @@ class SaveFragment : BaseFragment<FragmentSaveBinding>(FragmentSaveBinding::infl
     private fun FragmentSaveBinding.setupRecyclerView() {
         saveAdapter = SaveAdapter(
             onItemClick = { word -> navigateToWordDetail(word) },
-            onMickClick = { word -> speakEnglishWord(word) }
+            onMicClick = { word -> speakEnglishWord(word) }
         )
         rwSave.adapter = saveAdapter
     }
