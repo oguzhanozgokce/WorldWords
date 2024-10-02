@@ -2,9 +2,9 @@ package com.oguzhanozgokce.worldwords.ui.learnedword
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
+import com.oguzhanozgokce.worldwords.common.base.BaseAdapter
+import com.oguzhanozgokce.worldwords.common.base.BaseDiffCallback
+import com.oguzhanozgokce.worldwords.common.base.BaseViewHolder
 import com.oguzhanozgokce.worldwords.common.loadImage
 import com.oguzhanozgokce.worldwords.databinding.ItemLayoutLearnedWordBinding
 import com.oguzhanozgokce.worldwords.model.Word
@@ -12,43 +12,33 @@ import com.oguzhanozgokce.worldwords.model.Word
 class LearnedWordAdapter(
     private val onMicClick: (Word) -> Unit,
     private val onDeleteClick: (Word) -> Unit
-) : ListAdapter<Word, LearnedWordAdapter.WordViewHolder>(LearnedWordDiffCallback()) {
+) : BaseAdapter<Word, LearnedWordAdapter.WordViewHolder>(BaseDiffCallback(
+    { oldItem, newItem -> oldItem.english == newItem.english },
+    { oldItem, newItem -> oldItem == newItem }
+)) {
 
-    inner class WordViewHolder(private val binding: ItemLayoutLearnedWordBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(word: Word) {
+    inner class WordViewHolder(private val binding: ItemLayoutLearnedWordBinding) :
+        BaseViewHolder<Word>(binding.root) {
+        override fun bind(item: Word) {
             with(binding) {
-                tvTurkishWord.text = word.turkish
-                tvEnglishWord.text = word.english
-                wordImage.loadImage(word.image)
+                tvTurkishWord.text = item.turkish
+                tvEnglishWord.text = item.english
+                wordImage.loadImage(item.image)
                 root.setOnLongClickListener {
-                    onMicClick(word)
+                    onMicClick(item)
                     true
                 }
                 icRemove.setOnClickListener {
-                    onDeleteClick(word)
+                    onDeleteClick(item)
                 }
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
-        val binding =
-            ItemLayoutLearnedWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemLayoutLearnedWordBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return WordViewHolder(binding)
     }
-
-    override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
-        holder.bind(getItem(position))
-    }
-
-    class LearnedWordDiffCallback : DiffUtil.ItemCallback<Word>() {
-        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
-            return oldItem.english == newItem.english
-        }
-
-        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
-            return oldItem == newItem
-        }
-    }
 }
+
 
